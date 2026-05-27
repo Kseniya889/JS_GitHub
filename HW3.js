@@ -24,10 +24,6 @@ switch (question1) {
 }
 
 
-
-
-
-
 // variant 2
 let operations = ['add', 'sub', 'mult', 'div'];
 let question1 = prompt(`Вибери операцію ${operations.join(', ')}`, 'add');
@@ -47,7 +43,7 @@ function mult (a,b) {
 }
 function div (a,b) {
   if (b === 0) {
-      alert('На нуль ділити не можна!!!')
+      return ('На нуль ділити не можна!!!')
     } else {
     return `${a} / ${b} = ${a / b}`;
     }
@@ -55,16 +51,16 @@ function div (a,b) {
 
 switch (question1) { 
   case 'add':
-    alert(`Результат розрахунку, ${add (a,b)}`);
+    alert(add (a,b));
   break;
   case 'sub':
-    alert(`Результат розрахунку, ${sub (a,b)}`);
+    alert(sub (a,b));
   break;
   case 'mult':
-    alert(`Результат розрахунку, ${mult (a,b)}`);
+    alert(mult (a,b));
   break;
   case 'div':
-    alert(`Результат розрахунку, ${div (a,b)}`);
+    alert(div (a,b));
     break;
   default:
   alert("Невідома операція");
