@@ -1,3 +1,4 @@
+/*
 // 1.
 let func1 = () => "Привіт, Ксюша!";
 console.log(func1());
@@ -80,10 +81,52 @@ console.log(obj[question3](a,b,c));
 
 
 // Функція‑генератор повідомлення: стрілкова функція приймає ім’я і повертає рядок "Привіт, <ім’я>!".
-
 let question4 = prompt("Назви своє ім'я");
-
 let func15 = name => (`Привіт, ${name}!`);
-
 console.log(func15(question4));
 
+
+// Вивести числа: за допомогою for виведи числа від 1 до 10.
+for (let f = 0; f<=10; f++) {
+  console.log(f);
+}
+*/
+
+
+// Сума чисел: знайди суму чисел від 1 до 100.
+// 1 variant
+let sum = 0;
+for (let f = 0; f<100; f++) {
+ sum += f
+}
+console.log(sum);
+
+// 2 variant
+let n = 99;
+console.log((n*(n+1))/2);
+
+
+// Парні числа: виведи всі парні числа від 1 до 20.
+for (let l=1; l<=20; l++) {
+  if (l%2 === 0) {
+  console.log(l)
+  }
+}
+
+// Перетворення типів: зроби цикл, який проходить масив рядків чисел (["5","10","15"]) і перетворює їх у числа.
+const arr = ["5", "10", "15"];
+  for (const arrToNum of arr) {
+    console.log(Number(arrToNum));
+  }
+
+// Факторіал: обчисли факторіал числа за допомогою while.
+let factorial = 2;
+let startNum = 1;
+let i=1;
+
+while (i<=n) {
+  startNum *= factorial;
+  i++;
+ 
+}
+ console.log(startNum);
