@@ -42,32 +42,3 @@ ul li {list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
-
-.first_paragraph {
-max-width: 41%;
-text-indent: 20px;
-margin: 0 0 20px 0;
-}
-
-.second_paragraph {
-  display: block;
-text-indent: 20px;
-}
-
-span>a{
-  display: block;
-text-indent: 20px;
-color: green;
-}
-
-.list {
-  margin-top: 20px;
-  font-size: 20px;
-
-}
-
-.list li{
-padding: 0 0 0 30px;
-background: url('../img/mark-removebg-preview.png') 0 50%/contain no-repeat;
-
-}
