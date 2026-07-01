@@ -34,3 +34,10 @@ https://validator.w3.org/?utm_source=chatgpt.com#validate_by_input
 Valid CSS
 https://jigsaw.w3.org/css-validator/?utm_source=chatgpt.com#validate_by_input
 
+бібліотеки іконок
+https://icons8.com/
+https://icons.getbootstrap.com/
+
+	щоб додати svg з бібліотеки в background-image потрібно наступне:
+	1.в url додати "data:image/svg+xml;utf8, потім йде скопіюваний текст svg з 	бібліотеки і в ньому замінити всі " на ' і останнє, де є 6 код кольору наприклад #	11945а замінити # на %23 (результат %2311945а)
+
