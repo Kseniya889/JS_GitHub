@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Comfortaa';
+  font-weight: 700;
+  src: url(../JS_GitHub/src/assets/fonts/Comfortaa/static/Comfortaa-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 700;
+  src: url(../JS_GitHub/src/assets/fonts/Raleway/static/Raleway-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  src: url(../JS_GitHub/src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-weight: 400;
+  src: url(../JS_GitHub/src/assets/fonts/Nunito/static/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url(../JS_GitHub/src/assets/fonts/Roboto/static/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 500;
+  src: url(../JS_GitHub/src/assets/fonts/Raleway/static/Raleway-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-weight: 700;
+  src: url(../JS_GitHub/src/assets/fonts/Nunito/static/Nunito-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-weight: 600;
+  src: url(../JS_GitHub/src/assets/fonts/Nunito/static/Nunito-SemiBold.ttf);
+}
+
+ :root {
+--bg-line: #25282B;
+--brand-yellow: #FDC435;
+--bg-gray: #FFF;
+--bg-white: #F9FAFF;
+--border-gray: E8ECF4;
+--font-high-emphasis: #25282B;
+--font-medium-emphasis: #828282;
+--font-low-emphasis: #9A9FA8;
+--font-black: #333;
+--size-base: 4px;
+--content-width-max: 1200px;
+ }
+
+ *{
+box-sizing: border-box;
+ }
+
+ html {
+  font-size: 4px;
+ }
+
+ body {
+  font-size: 4rem;
+ }
+
+ html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+ }
+
+ .page {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .page__content {
+  display: flex;
+  flex-direction: column;
+
+  padding: calc(var(--size-base)*28) 0 calc(var(--size-base)*60);
+ }
+
+ .header {
+  display: flex;
+  flex-direction: row; /*можна не писати цей елемент, бо display: flex; за замовчуванням і є flex-direction: row;)*/
+ justify-content: space-between;
+ align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.first-display__content{
+  display: flex;
+  flex-direction: column;
+}
+
+.first-display__actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects {
+display: flex;
+  flex-direction: column;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card card_direction_reverse {
+  flex-direction: row-reverse;
+}
+
+.contacts {
+display: flex;
+  flex-direction: column;
+}
+
+.socials{
+  display: flex;
+}

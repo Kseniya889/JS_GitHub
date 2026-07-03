@@ -3,65 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mogo</title>
+  <title>Personal Portfolio Website</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-
-  <link rel="stylesheet" href="../JS_GitHub/style_mogo.css">
+  <link rel="stylesheet" href="../JS_GitHub/style.css">
 </head>
 <body>
-
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <div class="header__logo">Mogo</div>
-
+  <div class="page">
+    <main class="page__content">
+      <header class="header">
+        <div class="logo">Madelyn Torff</div>
         <nav class="nav">
-          <a class="nav__link" href="#">About</a>
-          <a class="nav__link" href="#">service</a>
-          <a class="nav__link" href="#">work</a>
-          <a class="nav__link" href="#">blog</a>
-          <a class="nav__link" href="#">contact</a>
+          <a href="#" class="nav__link">About</a>
+          <a href="#" class="nav__link">Projects</a>
+          <a href="#" class="nav__link">Contacts</a>
         </nav>
-      </div>
-    </div>
-  </header>
+      </header>
 
-<div class="intro">
-  <div class="container">
-    <div class="intro__inner">
-      <h2 class="intro__suptitle">Creative Template</h2>
-      <h1 class="intro__title">Welcome to MoGo</h1>
+      <section class="first-display">
+        <div class="first-display__content">
+          <div class="section__label">UI/UX Designer</div>
+          <h1 class="title title_h1">Hello,  my name is Madelyn Torff</h1>
+          <p class="first-display__descr">Short text with details about you, what you do or your professional career. You can add more information on the about page.</p>
+          <div class="first-display__actions">
+            <button class="btn btn_primary">Projects</button>
+            <button class="btn btn_outline">LinkedIn</button>
+          </div>
+        </div>
+        <img src="../JS_GitHub/src/assets/img/first_display_bg.jpg" 
+        srcset="../JS_GitHub/src/assets/img/first_display_bg2x.jpg" 
+        alt="Madelyn Torff" class="first-display">
+      </section>
 
-      <a class="btn" href="#" >Learn more</a>
-    </div>
+      <section class="projects">
+        <h2 class="title title_h2">Projects</h2>
+        <div class="projects__list">
+          <div class="card">
 
-    <div class="slider">
-      <div class="slider__item active">
-        <span class="number__slider">01</span>
-        <span class="text__slider">Intro</span>
-      </div>
-      <div class="slider__item">
-        <span class="number__slider">02</span>
-        <span class="text__slider">Work</span>
+            <div class="card__content">
+              <h3 class="card__title">Project Name</h3>
+              <p class="card__descr">I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.</p>
+              <button class="btn btn_round">View Project</button>
+            </div>
+            <img src="../JS_GitHub/src/assets/img/portfolio_1.jpg" 
+            srcset="../JS_GitHub/src/assets/img/portfolio_1_2x.jpg" 
+            alt="" class="card__img">
+          </div>
 
-      </div>
-      <div class="slider__item">
-        <span class="number__slider">03</span>
-        <span class="text__slider">About</span>
+          <div class="card card_direction_reverse">
+            <div class="card__content">
+              <h3 class="card__title">Project Name</h3>
+              <p class="card__descr">What was your role, your deliverables, if the project was personal, freelancing.</p>
+              <button class="btn btn_round">View Project</button>
+            </div>
+            <img src="../JS_GitHub/src/assets/img/portfolio_2.jpg" 
+            srcset="../JS_GitHub/src/assets/img/portfolio_2_2x.jpg" 
+            alt="" class="card__img">
+          </div>
 
-      </div>
-      <div class="slider__item">
-        <span class="number__slider">04</span>
-        <span class="text__slider">Contacts</span>
-      </div>
-    </div>
+          <div class="card">
+            <div class="card__content">
+              <h3 class="card__title">Project Name</h3>
+              <p class="card__descr">You can also add in this description the type of the project, if it was for web, mobile, electron.</p>
+              <button class="btn btn_round">View Project</button>
+            </div>
+            <img src="../JS_GitHub/src/assets/img/portfolio_3.jpg" 
+            srcset="../JS_GitHub/src/assets/img/portfolio_3_2x.jpg" 
+            alt="" class="card__img">
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2 class="title title_h2">Contacts</h2>
+        <form action="" class="form">
+          <div class="field form__field">
+            <label for="form-name" class="field__label">Name</label>
+            <input id="form-name" type="text" class="field__input">
+          </div>
+          <div class="field form__field">
+            <label for="form-email" class="field__label">Email</label>
+            <input id="form-email" type="email" class="field__input">
+          </div>
+          <div class="field form__field">
+            <label for="form-message" class="field__label">Message</label>
+            <textarea id="form-message" type="text" class="field__textarea"></textarea>
+          </div>
+            <button class="btn btn_primary">Send</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="socials">
+          <a href="#" class="social__link">
+            <img src="../JS_GitHub/src/assets/icons/instagram.svg" alt="" class="social__icon">
+          </a>
+          <a href="#" class="social__link">
+            <img src="../JS_GitHub/src/assets/icons/linkedin.svg" alt="" class="social__icon">
+          </a>
+          <a href="#" class="social__link">
+            <img src="../JS_GitHub/src/assets/icons/email.svg" alt="" class="social__icon">
+          </a>
+          
+          
+        </div>
+        <p class="copyright">Madelyn Torff 2026 </p>
+
+      </footer>
+      <img src="../JS_GitHub/src/assets/icons/footer_bg.svg" alt="" class="footer__d">ecor
+
+
+    </main>
   </div>
-</div>
 
 
 
