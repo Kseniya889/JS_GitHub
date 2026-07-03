@@ -78,6 +78,10 @@ box-sizing: border-box;
   min-height: 100vh;
  }
 
+ h1, h2, h3, h4, h5 {
+  margin: 0;
+ }
+
  .page {
   display: flex;
   flex-direction: column;
@@ -88,6 +92,7 @@ box-sizing: border-box;
   flex-direction: column;
 
   padding: calc(var(--size-base)*28) 0 calc(var(--size-base)*60);
+  row-gap: calc(var(--size-base)*36);
  }
 
  .header {
@@ -100,7 +105,22 @@ box-sizing: border-box;
 .nav {
   display: flex;
   align-items: center;
+
+  column-gap: calc(var(--size-base)*12);
 }
+
+.section__label {
+  margin-bottom: calc(var(--size-base)*3) 
+}
+
+.title_h1 {
+  margin-bottom: calc(var(--size-base)*8) 
+}
+
+.first-display__descr {
+  margin-bottom: calc(var(--size-base)*8) 
+}
+
 
 .first-display__content{
   display: flex;
@@ -110,17 +130,25 @@ box-sizing: border-box;
 .first-display__actions {
   display: flex;
   flex-direction: row;
+
+  column-gap: calc(var(--size-base)*3);
 }
 
 .projects {
 display: flex;
-  flex-direction: column;
+  flex-direction: column;    
+
+  row-gap: calc(var(--size-base)*20); 
 }
 
 .projects__list {
   display: flex;
   flex-direction: column;
+
+  row-gap: calc(var(--size-base)*20); 
 }
+
+
 
 .card {
   display: flex;
@@ -129,6 +157,10 @@ display: flex;
 .card__content {
   display: flex;
   flex-direction: column;
+
+  padding: calc(var(--size-base)*12);
+
+    row-gap: calc(var(--size-base)*8)
 }
 
 .card card_direction_reverse {
