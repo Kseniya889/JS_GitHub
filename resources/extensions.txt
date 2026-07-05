@@ -1,0 +1,10 @@
+ for VS Code 
+Auto Complete Tag 
+ indent-rainbow
+eCSStractor for VSCode 
+Bracket Pair Colorizer
+Material Icon Theme
+Code Runner
+Prettier Code formatter
+HTML End Tag Labels
+Better Comments
