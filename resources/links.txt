@@ -41,3 +41,6 @@ https://squoosh.app/
 https://icons8.com/icons
 
 CSS Through HTML ctrl+shift+p CSS Through HTML: Include All CSS
+
+BEM
+https://bem.info/ru/methodology/quick-start/

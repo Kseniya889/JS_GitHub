@@ -27,7 +27,6 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
 
-  padding: 30px 30px;
 }
 input, button, textarea {
   font-family: inherit;
@@ -59,4 +58,3 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 /* !-------------------- */
-
