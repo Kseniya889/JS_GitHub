@@ -45,7 +45,6 @@ button {cursor: pointer;}
 button::-moz-focus-inner {padding: 0;border: 0;}
 a, a:visited {text-decoration: none;}
 a:hover {text-decoration: none;}
-ul li {list-style: none;}
 img {vertical-align: top;}
 h1, h2, h3, h4, h5, h6 {font-size: inherit;font-weight: inherit;}
 
@@ -53,15 +52,16 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit;font-weight: inherit;}
 /* !-------------------- */
 
 body{
-font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-color: #3A3A3A;
-font-size: 1rem;
-/* letter-spacing: */
-background-color: #fff;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  color: #3A3A3A;
+  font-size: 1rem;
+  line-height: 1.2;
+letter-spacing: -0.03em;
+  background-color: #fff;
 
+  position: relative;
 }
-
 
 .container{
   max-width: 1518px;
@@ -69,77 +69,334 @@ background-color: #fff;
   padding: 0;
 }
 
-
-.header{}
-
-.header .container {
-display: flex;
-align-items: center;
-justify-content: space-between;
+.section-title {
+  font-weight: 600;
+  font-size: 40px;  
 }
 
 
+/*-------------------
+        HEADER
+--------------------*/
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0 auto;
+  padding: 20px 40px;
+}
+
 .header__logo {
-/* width: 265px; */
-max-width: 100%; 
-height: auto;
+  max-width: 100%; 
+  height: auto;
 }
 
 .header__nav {
-display: flex;
-align-items: center;
-gap: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .header__link {
   font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-line-height: 1.2;
-color: #3A3A3A;
+  font-weight: 500;
+  color: #3A3A3A;
 }
 
 .lang-selector {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
 }
 
 .lang-selector__icon1 {
-background: url('img/header_global.svg') center/contain no-repeat;
-width: 1em;
+  background: url('img/header_global.svg') center/contain no-repeat;
+  width: 1em;
   height: 1em;
   display: inline-block;
 }
 
 .lang-selector__text {
-font-weight: 400;
-font-size: 14px;
-line-height: 1.2;
-color: #EC6714;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #EC6714;
 }
 
 .lang-selector__arrow {
-background: url('img/header_arrow-down.svg') center/contain no-repeat;
-width: 1em;
+  background: url('img/header_arrow-down.svg') center/contain no-repeat;
+  width: 1em;
   height: 1em;
   display: inline-block;
 }
 
 .phone-button {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-border-radius: 1px;
-padding: 12px 24px;
-gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px;
+  padding: 12px 24px;
+  gap: 10px;
 
-background-color: #0D4F23;
+  background-color: #0D4F23;
 }
 
 .phone-button__icon {
-background: url('img/header_call.svg') center/contain no-repeat;
-width: 1.5em;
-height: 1.5em;
-display: inline-block;
+  background: url('img/header_call.svg') center/contain no-repeat;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
 }
+
+
+/*-------------------
+        MAIN
+--------------------*/
+
+.main {
+padding-top: 109px; /*висота хедера*/
+}
+
+
+/*------HERO------*/
+
+.main__hero {
+  background-image: url(./img/hero_bg.jpg);
+  background-position: center 80%; /* можна зміщувати по X і Y */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+
+.main__hero:after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.hero__title {
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  max-width: 719px;
+  margin-bottom: 48px;
+  z-index: 2;
+}
+
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 42px;
+  gap: 10px;
+  z-index: 2;
+
+  color: #FFFFFF;
+  background: #EC6714;
+}
+
+
+.hero__link::after{
+  content: '';
+  background: url(./img/link_pdf.svg) center/cover no-repeat;
+  display: inline-block;
+  width: 26px;
+  height: 32px;
+}
+
+
+/*------CONCEPT------*/
+
+
+.concept {
+  padding: 116px 40px 164px;
+}
+
+.concept__wrapper{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 48px;
+  gap: 90px;
+  max-height: 699px;
+}
+
+
+.subtitle {
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+
+.stats__list {
+  display: grid;
+  /* grid-template-columns: repeat(3, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(var(--cols,3), minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stats--concept {
+  margin-bottom: 64px;
+}
+
+.stats__title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.stats__title::after{
+  content: '';
+  display: block;
+  width: 93px;
+  border-bottom: 4px solid #0D4F23;
+  margin-top: 10px;
+}
+
+.stats__label {
+  color: rgba(58, 58, 58, 0.8);
+  margin-bottom: 8px;
+}
+
+.stats__value {
+  text-transform: uppercase;
+  color: #EC6714;
+}
+
+.concept__img {
+  max-width: 702px;
+  height: 100%;
+}
+
+.frame {
+  display:inline-block;
+  position: relative;
+}
+
+.frame::after{
+  content: '';
+  position: absolute;
+  top: 38px;
+  right: 48px;
+  width: 100%;
+  height: 100%;
+  border: 16px solid #F4F4F4;
+  z-index: -1;
+}
+
+.frame--right::after{
+  content: '';
+  position: absolute;
+  top: 57px;
+ left: 48px;
+  width: 100%;
+  height: 100%;
+  border: 16px solid #F4F4F4;
+  z-index: -1;
+}
+
+
+
+
+/*------SOCIO-ECONOMIC------*/
+
+
+
+.socio-economic .container{
+display: flex;
+gap: 124px;
+
+}
+
+.container {
+
+}
+
+.frame {
+
+}
+
+
+
+.socio-economic__img-wrapper {
+
+}
+
+.concept__img {
+
+}
+
+.socio-economic__img {
+
+}
+
+.socio-economic__wrapper {
+
+}
+
+.subtitle {
+
+}
+
+.socio-economic__subtitle {
+
+}
+
+.socio-economic__lists {
+font-size: 20px;
+color: rgba(58, 58, 58, 0.8);
+list-style-type: disc;
+padding-left: 10px;
+}
+
+.socio-economic__text {
+  margin-bottom: 20px;
+
+}
+
+
+
+.socio-economic{
+  margin-bottom: 176px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
