@@ -69,6 +69,8 @@ letter-spacing: -0.03em;
   padding: 0;
 }
 
+
+
 .section-title {
   font-weight: 600;
   font-size: 40px;  
@@ -324,65 +326,208 @@ padding-top: 109px; /*висота хедера*/
 
 /*------SOCIO-ECONOMIC------*/
 
-
+.socio-economic{
+  padding: 0 40px;
+}
 
 .socio-economic .container{
-display: flex;
-gap: 124px;
-
-}
-
-.container {
-
-}
-
-.frame {
-
-}
-
-
-
-.socio-economic__img-wrapper {
-
-}
-
-.concept__img {
-
-}
-
-.socio-economic__img {
-
-}
-
-.socio-economic__wrapper {
-
-}
-
-.subtitle {
-
-}
-
-.socio-economic__subtitle {
-
+  display: flex;
+  gap: 124px;
 }
 
 .socio-economic__lists {
-font-size: 20px;
-color: rgba(58, 58, 58, 0.8);
-list-style-type: disc;
-padding-left: 10px;
+  font-size: 20px;
+  color: rgba(58, 58, 58, 0.8);
+  list-style-type: disc;
+  padding-left: 10px;
 }
 
 .socio-economic__text {
   margin-bottom: 20px;
-
 }
-
-
 
 .socio-economic{
   margin-bottom: 176px;
 }
+
+
+
+
+/*------PARK-DETAILS------*/
+
+
+.park-details {
+padding: 0 40px;
+}
+
+.advantages__list-wrapper {
+margin-top: 48px;
+}
+
+.advantages__list{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+list-style: none;
+
+}
+
+.advantages__button {
+  /* max-width: 494px; */
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  background-color: #FEF0E8;
+  gap: 20px;
+  cursor: pointer;
+}
+
+
+
+.advantages__button--active{
+  /* max-width: 494px; */
+  /* display: inline-flex; */
+  /* align-items: center; */
+background-color: #EC6714;
+font-size: 20px;
+/* text-align: center; */
+}
+
+
+
+
+.advantages__number {
+font-weight: 600;
+font-size: 87px;
+
+color: rgba(236, 103, 20, 0.14);
+
+}
+
+
+.advantages__button--active .advantages__number{
+font-weight: 600;
+font-size: 87px;
+
+color: rgba(255, 255, 255, 0.14);
+}
+
+.advantages__text {
+  max-width: 268px;
+font-weight: 500;
+font-size: 20px;
+text-align: center;
+color: #EC6714;
+
+}
+
+.advantages__button--active .advantages__text {
+font-weight: 600;
+text-align: center;
+color: #FFFFFF;
+}
+
+
+
+
+.park-details__block {
+
+}
+
+.park-details__section {
+
+}
+
+.infrastructure__wrapper {
+
+}
+
+.infrastructure__list {
+
+}
+
+.infrastructure__item {
+
+}
+
+.infrastructure__number {
+
+}
+
+.infrastructure__text {
+
+}
+
+.park-details__section2 {
+
+}
+
+.distances__wrapper {
+
+}
+
+.section-title--small {
+
+}
+
+.distances__list {
+
+}
+
+.distances__item {
+
+}
+
+.distances__number {
+
+}
+
+.distances__text {
+
+}
+
+.entrances__wrapper {
+
+}
+
+.entrances__list {
+
+}
+
+.entrances__item {
+
+}
+
+.entrances__number {
+
+}
+
+.entrances__text {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
