@@ -80,7 +80,7 @@ letter-spacing: -0.03em;
 
 .small-text {
   font-size: 20px;
-  color: rgba(58, 58, 58, 0.8);
+  opacity: 0.8;
   list-style-type: disc;
   padding-left: 10px;
 }
@@ -431,12 +431,13 @@ padding-top: 109px; /*висота хедера*/
 
 
 .advantages__details {
-  display: none;
+  /* display: none; */
 }
 .advantages__details--01 {
   justify-content: space-between;
   margin-top: 64px;
 }
+
 .advantages__details--01.advantages__details--active {
   display: flex; /* або block */
 }
@@ -481,7 +482,7 @@ padding-top: 109px; /*висота хедера*/
   margin-bottom: 25px;
 }
 
-.distances__number {
+.number {
   text-transform: uppercase;
   color: #EC6714;
   margin-top: 8px;
@@ -597,6 +598,7 @@ display: flex;
 margin-top: 83px;
 align-items: flex-start;
 justify-content: space-between;
+gap: 40px;
 }
 
 .details-panel {
@@ -645,8 +647,14 @@ display: inline-block;
 
 }
 
+.details__finance-img{
+  /* flex: 0; */
+}
+
 .finance__img {
-  max-width: 702px;
+  max-width: 700px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 
@@ -655,6 +663,76 @@ display: inline-block;
 
 
 
+/*------ADVANTAGES__DETAILS--4------*/
+
+.advantages__details {
+}
+.advantages__details--04 {
+}
+.details-panel {
+}
+.details-panel--staff {
+  /* display: flex; */
+}
+.section__details--workforce {
+}
+.workforce__list {
+  display: flex;
+  gap: 64px;
+
+} 
+.workforce__item {
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+
+} 
+.workforce__text {
+
+
+}
+
+.workforce__text--1::before {
+  content: '';
+  background: url(./img/workforce1.svg) center/contain no-repeat;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+}
+
+.workforce__text--2 {
+
+}
+
+.workforce__text--2::before {
+  content: '';
+  background: url(./img/workforce2.svg) center/contain no-repeat;
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+  /* align-items: center; */
+}
+
+
+
+
+
+.section-title--small {
+}
+.workforce__number {
+  /* padding-left: 10px; */
+}
+.number {
+}
+
+
+.details__img--staff{
+  width: 100%;
+max-width: 702px;
+height: auto;
+flex-shrink: 0;
+}
 
 
 
