@@ -95,7 +95,7 @@ letter-spacing: -0.03em;
   color: #3A3A3A;
 }
 
-.section-title--small::before{
+.section-title--small-icon::before{
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -431,22 +431,18 @@ padding-top: 109px; /*висота хедера*/
 
 
 .advantages__details {
-  /* display: none; */
+  display: none;
 }
 .advantages__details--01 {
   justify-content: space-between;
   margin-top: 64px;
 }
 
-.advantages__details--01.advantages__details--active {
+.advantages__details--active {
   display: flex; /* або block */
 }
-.advantages__details--02.advantages__details--active {
-  display: flex; /* або block */
-}
-.advantages__details--03.advantages__details--active {
-  display: flex; /* або block */
-}
+
+
 
 
 .infrastructure__list {
@@ -665,73 +661,90 @@ display: inline-block;
 
 /*------ADVANTAGES__DETAILS--4------*/
 
-.advantages__details {
-}
+
 .advantages__details--04 {
+/* display: flex; */
+align-items: flex-start;
+justify-content: space-between;
+gap: 118px;
+margin-top: 70px;
 }
-.details-panel {
-}
-.details-panel--staff {
-  /* display: flex; */
-}
-.section__details--workforce {
-}
+
+
+/* section__details--workforce */
+
 .workforce__list {
-  display: flex;
-  gap: 64px;
+display: flex;
+gap: 85px;
 
-} 
+}
+
 .workforce__item {
-    display: flex;
+display: flex;
+align-items: flex-start;
+list-style: none;
+gap: 8px;
+}
+
+.workforce__icon{
+  content: '';
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+}
+
+.workforce__icon--1 {
+background: url(./img/workforce1.svg) center/contain no-repeat;
+}
+
+.workforce__icon--2 {
+background: url(./img/workforce2.svg) center/contain no-repeat;
+}
+
+.workforce__content {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-
-} 
-.workforce__text {
-
-
 }
-
-.workforce__text--1::before {
-  content: '';
-  background: url(./img/workforce1.svg) center/contain no-repeat;
-  width: 1.5em;
-  height: 1.5em;
-  display: inline-block;
-}
-
-.workforce__text--2 {
-
-}
-
-.workforce__text--2::before {
-  content: '';
-  background: url(./img/workforce2.svg) center/contain no-repeat;
-  width: 1.5em;
-  height: 1.5em;
-  display: block;
-  /* align-items: center; */
-}
-
-
-
-
-
-.section-title--small {
-}
-.workforce__number {
-  /* padding-left: 10px; */
-}
-.number {
-}
-
 
 .details__img--staff{
   width: 100%;
-max-width: 702px;
-height: auto;
-flex-shrink: 0;
+  height: auto;
+  max-width: 743px;
+  display: block;
+} 
+
+
+
+/* section__details--education */
+
+.section__details--education {
+
+}
+
+.section-title--education {
+margin-top: 40px;
+}
+
+.education__item {
+ padding: 10px 0;
+ margin-left: 20px;
+}
+
+
+/* section__details--employment */
+
+
+.section__details--employment {
+
+}
+
+.section-title--employment {
+margin-top: 40px;
+}
+
+.employment__item {
+padding: 15px 0;
+ margin-left: 20px;
 }
 
 
@@ -739,6 +752,29 @@ flex-shrink: 0;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------cooperation__section------*/
+
+.cooperation__section{
+  margin-top: 64px;
+}
 
 
 /* 
