@@ -663,27 +663,25 @@ display: inline-block;
 
 
 .advantages__details--04 {
-/* display: flex; */
-align-items: flex-start;
-justify-content: space-between;
-gap: 118px;
-margin-top: 70px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 118px;
+  margin-top: 70px;
 }
 
 
 /* section__details--workforce */
 
 .workforce__list {
-display: flex;
-gap: 85px;
-
+  display: flex;
+  gap: 85px;
 }
 
 .workforce__item {
-display: flex;
-align-items: flex-start;
-list-style: none;
-gap: 8px;
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  gap: 8px;
 }
 
 .workforce__icon{
@@ -694,11 +692,11 @@ gap: 8px;
 }
 
 .workforce__icon--1 {
-background: url(./img/workforce1.svg) center/contain no-repeat;
+  background: url(./img/workforce1.svg) center/contain no-repeat;
 }
 
 .workforce__icon--2 {
-background: url(./img/workforce2.svg) center/contain no-repeat;
+  background: url(./img/workforce2.svg) center/contain no-repeat;
 }
 
 .workforce__content {
@@ -717,49 +715,159 @@ background: url(./img/workforce2.svg) center/contain no-repeat;
 
 /* section__details--education */
 
-.section__details--education {
-
-}
-
 .section-title--education {
-margin-top: 40px;
+  margin-top: 40px;
 }
 
 .education__item {
- padding: 10px 0;
- margin-left: 20px;
+  padding: 10px 0;
+  margin-left: 20px;
 }
 
 
 /* section__details--employment */
 
-
-.section__details--employment {
-
-}
-
 .section-title--employment {
-margin-top: 40px;
+  margin-top: 40px;
 }
 
 .employment__item {
-padding: 15px 0;
- margin-left: 20px;
+  padding: 15px 0;
+  margin-left: 20px;
+}
+
+
+/*------ADVANTAGES__DETAILS--5------*/
+
+.neighbors__list {
+  margin-top: 82px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.neighbors__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 24px 50px 43px;
+  list-style: none;
+
+  box-sizing: border-box;
+  background: #FEFAF8;
+  border: 1px solid rgba(13, 79, 35, 0.13);
+}
+
+.neighbors__img {
+  width: 6em;
+  height: 6em;
+}
+
+.neighbors__text {
+  display: block;
+  /* overflow-wrap: break-word;
+  /* word-wrap: break-word; */
+  text-wrap: balance; 
+
+  font-weight: 400;
+  color: #3A3A3A;
+  text-align: center;
+}
+
+
+
+
+/*------ADVANTAGES__DETAILS--6------*/
+
+/* services-panel */
+
+.advantages__details--06 {
+  margin-top: 82px;
+}
+
+.services-list {
+  display: grid;
+  grid-auto-rows: minmax(67px, auto); 
+  /* grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)); */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+.services-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  background: #F7F9F8;
+  border: 1px solid rgba(13, 79, 35, 0.13);
+
+  font-weight: 600;
+  text-align: center;
+  color: #0D4F23;
+  max-width: 315px;
+
+  text-wrap: balance; 
+}
+
+.company-info {
+  margin-top: 48px;
+  margin-bottom: 32px;
+
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  max-width: 394px;
+}
+
+.contact-form_wrapper{
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.contact-form__label {
+  font-size: 20px;
+  color: #000000;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.contact-form__label::before{
+  content: '';
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.icon-phone::before{
+  background: url(./img/call.svg) center/cover no-repeat;
+}
+
+.icon-email::before {
+  background: url(./img/sms-edit.svg) center/cover no-repeat;
+}
+
+.contact-form__text {
+font-weight: 400;
+color: #6B6B6B;
 }
 
 
 
 
 
+.contact-form--main {
 
-
-
-
-
-
-
-
-
+}
 
 
 
