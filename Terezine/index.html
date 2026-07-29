@@ -464,26 +464,79 @@
               </div>
               
 
+
+
+
               <div class="contact-form contact-form--main">
-                <h2 class="contact-form--main_title"></h2>
+
+                <h2 class="contact-form--main_title">Є питання? Напишіть нам</h2>
+
                 <form class="contact-form--main__form">
+
+                  <div class="contact-form__intro">
                   
                   <div class="contact-form--main__field">
-                    <label for="name" class="contact-form--main__label"></label>
-                    <input type="text" id="name" name="name" class="contact-form--main__input" required>
+                    <label for="name" class="contact-form--main__label">Ім’я</label>
+                    <input type="text" id="name" name="name" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="1" required>
+                  </div>
+                  
+                  <div class="contact-form--main__field">
+                    <label for="email" class="contact-form--main__label">Email</label>
+                    <input type="email" id="email" name="email" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="2" required>
+                  </div>
+                  
+                  <div class="contact-form--main__field">
+                    <label for="phone" class="contact-form--main__label">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="3" required>
+                  </div>
+                  
+                  <div class="contact-form--main__field">
+                    <label for="company" class="contact-form--main__label">Компанія</label>
+                    <input type="text" id="company" name="company" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="4" required>
+                  </div>
+
+
+                   <div class="contact-form--main__field--textarea">
+                    <label for="message" class="contact-form--main__label contact-form--main__label--textarea">Ваше запитання</label>
+                    <textarea name="message" id="message" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="5"></textarea>
                   </div>
 
 
 
-                  <li class="contact-form--main contact-form--main__name"></li>
-                  <li class="contact-form--main contact-form--main__email"></li>
-                  <li class="contact-form--main contact-form--main__phone"></li>
-                  <li class="contact-form--main contact-form--main__company"></li>
+                  </div>
+
+
+
+
+
+                  <div class="contact-form__extras">
+
+                  <div class="contact-form--main__field--attachment">
+                    <input type="file" id="attachment" name="attachment" class="contact-form--main__input contact-form--main__input--attachment" placeholder="Ваш коментар..." tabindex="6">
+                    <label for="attachment" class="contact-form--main__label--attachment">Прикріпити файл</label>
+                  </div>
+
+                  <div class="contact-form--main__field--checkbox">
+                    <input type="checkbox" id="checkbox" name="checkbox" class="contact-form--main__input contact-form--main__input--checkbox" placeholder="Ваш коментар..." tabindex="7">
+                    <label for="checkbox" class="contact-form--main__label--checkbox">Я приймаю<a href="#" class="vis-underline"> Умови використання</a> та надаю згоду на обробку своїх персональних даних відповідно до <a href="#" class="vis-underline">Повідомлення про приватність</a>.</label>
+                  </div>
+
+                  <div class="contact-form__extras_btn">
+                    <button class="contact-form__submit" type="submit">Надіслати</button>
+                  </div>
+                  </div>
+
+
+
                 </form>
+
+               
 
 
 
               </div>
+
+
 
             </div>
           </div>

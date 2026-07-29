@@ -781,6 +781,14 @@ display: inline-block;
 
 /*------ADVANTAGES__DETAILS--6------*/
 
+.details-panel--management{
+  display: flex;
+  align-items: flex-start;
+  gap: 120px;
+}
+
+
+
 /* services-panel */
 
 .advantages__details--06 {
@@ -863,18 +871,153 @@ color: #6B6B6B;
 
 
 
-
+/* contact-form--main */
 
 .contact-form--main {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid rgba(13, 79, 35, 0.13);
+  padding: 32px 26px;
+}
 
+.contact-form--main_title {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact-form__intro {
+  display: grid;
+  /* grid-auto-rows: minmax(24px, auto);  */
+   /* grid-template-columns: repeat(auto-fit, minmax(340px, 2fr)); */
+  /* grid-template-columns: repeat(2, 1fr); */
+  gap: 20px; 
+  grid-template-columns: repeat(2, 315px);
+}
+
+.contact-form--main__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form--main__label {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.contact-form--main__label::after{
+  content: '*';
+  color: red;
+  padding-left: 5px;
+}
+
+.contact-form--main__label--textarea::after{
+  content: none;
 }
 
 
+.contact-form__extras{
+  margin-top: 8px;
+}
 
+.contact-form--main__input {
+background: #F9F9F9;
+border: 1px solid #E3E3E3;
+border-radius: 6px;
 
+font-weight: 400;
+font-size: 14px;
+color: #868686;
+padding: 16px;
+}
 
+.contact-form--main__field--textarea{
+  grid-column: 1 / span 2;   /* розтягнути на дві колонки */
+  display: flex;
+  flex-direction: column;
+}
 
+.contact-form--main__input--textarea{
+  resize: vertical;
+  grid-row: auto; 
+  min-height: 140px;
+}
 
+.contact-form--main__field--attachment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0D5B7B;
+  margin-bottom: 16px;
+}
+
+.contact-form--main__input--attachment{
+  display: none;
+}
+
+.contact-form--main__label--attachment::before{
+  content: '';
+  display: inline-block;
+  background: url(./img/attachment.svg) center/cover no-repeat;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.contact-form--main__label--attachment {
+  align-items: flex-start;
+  gap: 8px;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration-line: underline;
+  text-decoration-color: #0D5B7B;
+  text-underline-offset: 4px; /* опускає лінію вниз */
+}
+
+.contact-form--main__field--checkbox {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.contact-form--main__input--checkbox {
+  transform: scale(1.5);  
+  appearance: auto;
+  transform-origin: left center;
+}
+
+.contact-form--main__label--checkbox {
+  font-weight: 400;
+  font-size: 14px;
+  color: #4A4A4A;
+  max-width: 672px;
+}
+
+.vis-underline{
+  text-decoration: underline;
+  color: #4A4A4A;
+}
+
+.contact-form__extras_btn{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.contact-form__submit{
+  color: #FFFFFF;
+  background: #EC6714;
+  padding: 16px 88px;
+  cursor: pointer;
+  flex: 0 0 auto; /*кнопка не розтягується*/
+}
+
+.contact-form__submit:disabled {
+  opacity: .6; cursor: not-allowed; /*Вимкнення кнопки поки чекбокс не відмічено*/
+  } 
 
 
 
