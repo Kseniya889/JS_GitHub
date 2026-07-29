@@ -95,6 +95,13 @@ letter-spacing: -0.03em;
   color: #3A3A3A;
 }
 
+.section-title--small-icon{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
+
 .section-title--small-icon::before{
   content: '';
   display: inline-block;
@@ -576,7 +583,7 @@ padding-top: 109px; /*висота хедера*/
 }
 
 .resources__item--renewable::before {
-  background: url(./img/advbutton_icon2.png) center/contain no-repeat;
+  background: url(./img/advbutton_icon3.png) center/contain no-repeat;
 }
 
 .resources__item--water::before {
@@ -665,7 +672,7 @@ display: inline-block;
 .advantages__details--04 {
   align-items: flex-start;
   justify-content: space-between;
-  gap: 118px;
+  gap: 94px;
   margin-top: 70px;
 }
 
@@ -707,7 +714,7 @@ display: inline-block;
 .details__img--staff{
   width: 100%;
   height: auto;
-  max-width: 743px;
+  max-width: 683px;
   display: block;
 } 
 
@@ -722,6 +729,12 @@ display: inline-block;
 .education__item {
   padding: 10px 0;
   margin-left: 20px;
+}
+
+
+.education__list{
+  max-width: 568px;
+  overflow-wrap: break-word;
 }
 
 
@@ -784,7 +797,7 @@ display: inline-block;
 .details-panel--management{
   display: flex;
   align-items: flex-start;
-  gap: 120px;
+  gap: 100px;
 }
 
 
@@ -808,7 +821,7 @@ display: inline-block;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px 20px;
 
   background: #F7F9F8;
   border: 1px solid rgba(13, 79, 35, 0.13);
