@@ -2,10 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=
-  
-  
-  , initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Індустріальний парк Терезине</title>
 
   <link rel="stylesheet" href="./style.css">
@@ -64,9 +61,9 @@
           <span class="slider__dot"></span>
         </div> -->
 
-
-      </div>
+      </div> 
     </header>
+  </div>
 
     <main class="main">
       <div class="container">
@@ -538,24 +535,281 @@
           </div>
         </section>
           
-
-
-
-
-
-
-
-
         <section class="cooperation__section">
-          <h2 class="section-title park-details__title">Співпраця</h2>
+          <h2 class="section-title cooperation__title">Співпраця</h2>
 
+          <div class="cooperation__block-btn__wrapper">
+            <ul class="cooperation__list">
+              <li class="cooperation__item" >
+                <button type="button" class="cooperation__button cooperation__button--active js-toggle" data-target="c1" aria-pressed="true">
+                  <span class="cooperation__number">01</span>
+                  <span class="cooperation__text">Оренда/суборенда земельної ділянки з правом забудови</span>
+                </button>
+              </li>
+
+              <li class="cooperation__item">
+                <button type="button" class="cooperation__button js-toggle" data-target="c2" aria-pressed="false">
+                  <span class="cooperation__number">02</span>
+                  <span class="cooperation__text">Продаж земельної ділянки</span>
+                </button>
+              </li>
+
+              <li class="cooperation__item">
+                <button type="button" class="cooperation__button js-toggle" data-target="c3" aria-pressed="false">
+                  <span class="cooperation__number">03</span>
+                  <span class="cooperation__text">Будівництво під замовлення</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cooperation__details-btn__wrapper">
+
+            <div class="cooperation__details cooperation__details--c1 cooperation__details--active" data-panel="c1">
+            </div>
+            
+            <div class="cooperation__details cooperation__details--c2" data-panel="c2" hidden>
+            </div>
+
+            <div class="cooperation__details cooperation__details--c3" data-panel="c3" hidden>
+            </div>
+
+          </div>
+
+          <div class="status__wrapper">
+            <div class="frame frame--right status__img-wrapper ">
+              <img src="./img/status.jpg" alt="" class="concept__img status__img">
+            </div>  
+            <div class="status__info" >
+              <h3 class="status__subtitle">Статус проєкту <span class="status__year">2025</span></h3>
+              <ul class="status__lists  small-text">
+                <li class="status__text">Рішенням ініціатора створення - Товариством з обмеженою відповідальністю «Індустріальний парк «Терезине» створено Індустріальний парк «Терезине» строком на 30 років</li>
+                <li class="status__text">Затверджено Концепцію Індустріального парку «Терезине»</li>
+                <li class="status__text">Обрано керуючою компанією Товариство з обмеженою відповідальністю «СМАРТ МЕНЕДЖМЕНТ ПАРК» та укладено договір про створення та функціонування індустріального парку</li>
+                <li class="status__text">Подано Заяву до Міністерства економіки України про включення Індустріального парку «Терезине» до Реєстру індустріальних парків</li>
+                <li class="status__text">Проведено заходи для залучення фінансування та побудови партнерської мережі Проєкту</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
+        <section class="news__section" aria-labelledby="news-title">
+                  <h2 id="news-title" class="section-title news__title">Новини</h2>
+
+                  <div class="news__wrapper">
+
+                    <article class="news__card">
+                      <a href="/news/1" class="news__link">
+                        <img src="./img/news1.jpg" alt="news1" class="news__img">
+                        <div class="news__body">
+                          <time class="news__date" datetime="2025-06-05">05.06.2025</time>
+                          <p class="news__text">Ініціатор створення індустріального парку «Терезине» разом із...</p>
+                        </div>
+                        <span class="news__readmore">Читати далі</span>
+                      </a>
+                    </article>
+
+                    <article class="news__card">
+                      <a href="/news/2" class="news__link">
+                        <img src="./img/news2.jpg" alt="news1" class="news__img">
+                        <div class="news__body">
+                          <time class="news__date" datetime="2025-06-05">05.06.2025</time>
+                          <p class="news__text">4 червня 2025 року підписано Меморандум про взаєморозуміння...</p>
+                        </div>
+                        <span class="news__readmore">Читати далі</span>
+                      </a>
+                    </article>
+
+                    <article class="news__card">
+                      <a href="/news/3" class="news__link">
+                        <img src="./img/news3.jpg" alt="news1" class="news__img">
+                        <div class="news__body">
+                          <time class="news__date" datetime="2025-06-05">05.06.2025</time>
+                          <p class="news__text">За сприяння Агенції регіонального розвитку Київщини Індустріальний...</p>
+                        </div>
+                        <span class="news__readmore">Читати далі</span>
+                      </a>
+                    </article>
+
+
+                  </div>
+        </section>
+
+        <section class="contact__section">
+
+          <div class="contact__details">
+            <h2 class="section-title contact__title">Контакти</h2>
+
+            <div class="contact__details-wrapper">
+              <div class="contact-form contact-form--services">
+                <span class="contact-form__label icon-email">Пошта</span>
+                <span class="contact-form__text">smart.mpark@gmail.com</span>
+              </div>
+            
+              <div class="contact-form contact-form--services">
+                <span class="contact-form__label icon-address">Адреса</span>
+                <span class="contact-form__text">Україна, Київська область, Білоцерківський район, Автодорога Київ - Одеса 82 км + 500 м.</span>
+              </div>
+            
+              <div class="contact-form contact-form--services">
+                <span class="contact-form__label icon-phone">Телефон</span>
+                <span class="contact-form__text">+ (380) 95 287 68 68</span>
+              </div>
+
+              <div class="contacts__button">
+                <a href="#" class="btn map-link map-link--contacts">
+                  Переглянути на карті
+                </a>
+              </div>
+            </div>
+
+            <div class="contacts__socials">
+              <a href="" class="social-link social-link--facebook" aria-label="Facebook"></a>
+              <a href="" class="social-link social-link--instagram" aria-label="instagram"></a>
+              <a href="" class="social-link social-link--linkedin" aria-label="linkedin"></a>
+            </div>
+
+          </div>  
+
+          <div class="frame contact-form contact-form--main">
+
+            <h2 class="contact-form--main_title">Є питання? Напишіть нам</h2>
+
+            <form class="contact-form--main__form">
+
+              <div class="contact-form__intro">
+              
+              <div class="contact-form--main__field">
+                <label for="name" class="contact-form--main__label">Ім’я</label>
+                <input type="text" id="name" name="name" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="a1" required>
+              </div>
+              
+              <div class="contact-form--main__field">
+                <label for="email" class="contact-form--main__label">Email</label>
+                <input type="email" id="email" name="email" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="a2" required>
+              </div>
+              
+              <div class="contact-form--main__field">
+                <label for="phone" class="contact-form--main__label">Номер телефону</label>
+                <input type="tel" id="phone" name="phone" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="a3" required>
+              </div>
+              
+              <div class="contact-form--main__field">
+                <label for="company" class="contact-form--main__label">Компанія</label>
+                <input type="text" id="company" name="company" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="a4" required>
+              </div>
+
+
+                <div class="contact-form--main__field--textarea">
+                <label for="message" class="contact-form--main__label contact-form--main__label--textarea">Ваше запитання</label>
+                <textarea name="message" id="message" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="a5"></textarea>
+              </div>
 
 
 
+              </div>
+
+
+              <div class="contact-form__extras">
+
+              <div class="contact-form--main__field--attachment">
+                <input type="file" id="attachment" name="attachment" class="contact-form--main__input contact-form--main__input--attachment" >
+                <label for="attachment" class="contact-form--main__label--attachment">Прикріпити файл</label>
+              </div>
+
+              <div class="contact-form--main__field--checkbox">
+                <input type="checkbox" id="checkbox" name="checkbox" class="contact-form--main__input contact-form--main__input--checkbox">
+                <label for="checkbox" class="contact-form--main__label--checkbox">Я приймаю<a href="#" class="vis-underline"> Умови використання</a> та надаю згоду на обробку своїх персональних даних відповідно до <a href="#" class="vis-underline">Повідомлення про приватність</a>.</label>
+              </div>
+
+              <div class="contact-form__extras_btn">
+                <button class="contact-form__submit" type="submit">Надіслати</button>
+              </div>
+              </div>
+            </form>
+
+          </div>
+
+        </section>
       </div>
     </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+
+        <div class="container">
+
+          <div class="footer__branding">
+            <img src="./img/header_logo.svg" alt="logo" class="footer__logo">
+
+            <a href="#" class="hero__link" download>
+              Завантажити презентацію
+            </a>
+          </div>
+
+          <nav class="footer__nav">
+            <a href="#" class="footer__link">Концепція</a>
+            <a href="#" class="footer__link">Співпраця</a>
+            <a href="#" class="footer__link">Статус проєкту</a>
+            <a href="#" class="footer__link">Новини</a>
+            <a href="#" class="footer__link">Переваги</a>
+            <a href="#" class="footer__link">Контакти</a>
+          </nav>
+
+          <adress class="footer__contacts">
+            <!-- <div class="contact__details-wrapper"> -->
+              
+            <div class="contact-form contact-form--services">
+              <span class="contact-form__text contact-form__text--footer icon-address">Україна, Київська область, Білоцерківський район, Автодорога Київ - Одеса 82 км + 500 м.</span>
+            </div>
+              
+            <div class="contact-form contact-form--services">
+              <span class="contact-form__text contact-form__text--footer icon-email">ip.terezyne@gmail.com</span>
+            </div>
+
+            <div class="contact-form contact-form--services">
+              <span class="contact-form__text contact-form__text--footer icon-phone">+ (380) 95 287 68 68</span>
+            </div>
+
+          <!-- </div> -->
+
+          </adress>
+
+          <div class="footer__actions">
+            <div class="footer__socials">
+              <div class="contacts__socials">
+                <a href="" class="social-link social-link--facebook" aria-label="Facebook"></a>
+                <a href="" class="social-link social-link--instagram" aria-label="instagram"></a>
+                <a href="" class="social-link social-link--linkedin" aria-label="linkedin"></a>
+              </div>
+            </div>
+
+            <div class="footer__language">
+              <div class="lang-selector">
+                <span class="lang-selector__icon1"></span>
+                <span class="lang-selector__text">UK</span>
+                <span class="lang-selector__arrow"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      
+      <div class="footer__bottom">
+        <div class="container">
+          <span class="copyright">2025 © Всі права захищено.</span>
+
+          <div class="footer__developer">
+            <span class="developer__text">Розробка сайтів</span>
+            <img src="./img/footer_logoOLEUS.svg" alt="OLEUS" class="developer__img">
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+
   </div>
 
 

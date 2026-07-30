@@ -1,4 +1,4 @@
-
+// кнопки для advantages__section
   document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".advantages__button");
     const details = document.querySelectorAll(".advantages__details");
@@ -23,6 +23,43 @@
       });
     });
   });
+
+// кнопки для cooperation__section
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.cooperation__section').forEach(section => {
+    const buttons = section.querySelectorAll('.js-toggle');
+    const panels = section.querySelectorAll('[data-panel]');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target'); // "c1", "c2", "c3"
+
+        // зняти active з усіх кнопок у секції
+        buttons.forEach(b => {
+          b.classList.remove('cooperation__button--active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+
+        // приховати всі панелі у секції
+        panels.forEach(p => {
+          p.hidden = true;
+          p.classList.remove('cooperation__details--active');
+        });
+
+        // активувати натиснуту кнопку
+        button.classList.add('cooperation__button--active');
+        button.setAttribute('aria-pressed', 'true');
+
+        // показати відповідну панель у межах секції
+        const panel = section.querySelector(`[data-panel="${target}"]`);
+        if (panel) {
+          panel.hidden = false;
+          panel.classList.add('cooperation__details--active');
+        }
+      });
+    });
+  });
+});
 
 
 
