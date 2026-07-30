@@ -113,7 +113,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0 auto;
+  /* margin: 0 auto; */
   padding: 20px 40px;
 }
 
@@ -161,7 +161,7 @@ body{
   height: 1em;
   display: inline-block;
 }
-
+/* 
 .phone-button {
   display: inline-flex;
   align-items: center;
@@ -171,14 +171,103 @@ body{
   gap: 10px;
 
   background-color: #0D4F23;
+} */
+
+
+
+/* Button */
+.phone-button {
+  background-color: #0D4F23; /* зелений фон */
+  border: none;
+  /* border-radius: 50%;        кругла форма */
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.phone-button__icon {
+  background: url('./img/header_call.svg') center/cover no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+.modal {
+  display: none;              /* приховано за замовчуванням */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+
+  /* центрування */
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 33px 53px;
+  width: 359px;
+  text-align: center;
+}
+
+
+.modal__text {
+font-weight: 600;
+font-size: 32px;
+white-space: nowrap;
+padding-bottom: 27px;
+}
+
+
+.modal__number{
+font-weight: 400;
+font-size: 16px;
+white-space: nowrap;
+
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+}
+
+
+.modal__number::before{
+  content: '';
+  display: inline-block;
+  background: url(./img/call.svg);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+
+.close {
+  display: none;
+  /* float: right;
+  font-size: 24px;
+  cursor: pointer; */
+}
+
+
+
+
+
+
+/* 
+
+
+
 
 .phone-button__icon {
   background: url('img/header_call.svg') center/contain no-repeat;
   width: 1.5em;
   height: 1.5em;
   display: inline-block;
-}
+} */
 
 
 /*-------------------
@@ -197,7 +286,7 @@ padding-top: 109px; /*висота хедера*/
   background-position: center 80%; /* можна зміщувати по X і Y */
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: calc(100vh - 109px);
   position: relative;
 }
 
@@ -262,7 +351,7 @@ padding-top: 109px; /*висота хедера*/
   justify-content: space-between;
   margin-top: 48px;
   gap: 90px;
-  max-height: 699px;
+  /* max-height: 699px; */
 }
 
 .subtitle {
@@ -305,9 +394,10 @@ padding-top: 109px; /*висота хедера*/
   color: #EC6714;
 }
 
-.concept__img {
-  max-width: 660px;
-  height: 100%;
+.concept__img{
+    width:auto;
+    max-width:669px;
+    height:100%;
 }
 
 .frame {
@@ -329,7 +419,7 @@ padding-top: 109px; /*висота хедера*/
 .frame--right::after{
   content: '';
   position: absolute;
-  top: 57px;
+  top: 46px;
   left: 48px;
   width: 100%;
   height: 100%;
@@ -487,7 +577,7 @@ padding-top: 109px; /*висота хедера*/
 
 .entrances__list {
   list-style: none;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 
   display: grid;
   grid-template-columns: minmax(200px, 200px) 1fr;
@@ -577,7 +667,7 @@ gap: 40px;
 
 .finance__list {
 list-style: none;
-white-space: nowrap;
+/* white-space: nowrap; */
 }
 
 .finance__list--state {
@@ -1302,6 +1392,164 @@ gap: 8px;
   line-height: 1.4;
   color: #FFFFFF;
 }
+
+
+/*------SLADE------*/
+.main__hero {
+  position: relative;
+  background-image: url('./img/hero_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 109px); /* висота секції */
+  overflow: hidden; /* щоб нічого не вилазило */
+}
+
+/* текст */
+.hero_text {
+  position: relative;
+  z-index: 2; /* поверх фону і слайдера */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* слайдер */
+.slider {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;         /* займає всю секцію hero */
+  z-index: 1;
+}
+
+
+/* кружечки */
+.slider__dots {
+  position: absolute;
+  bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2; /* поверх фону */
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #0D4F23; /* зелений */
+}
+
+.slide {
+  display: none;      /* приховати всі */
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;     /* показати лише активний */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;         /* розтягуємо на всю висоту контейнера */
+  object-fit: cover;    /* обрізає зайве, але зберігає пропорції */
+  display: block;
+}
+
+
+
+
+
+/* BACKGROUND */
+
+/*-------------------
+    PAGE BACKGROUND
+--------------------*/
+/*-------------------
+    PAGE BACKGROUND
+--------------------*/
+
+/* .page_wrapper{
+    position: relative;
+    z-index: 0;
+}
+
+.page-background{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 1440px;      /* ширина макета */
+    /* max-width: 100%;
+
+    height: 100%;
+    min-height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.page-background__container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.page-background__pattern{
+    position: absolute;
+    display: block;
+    max-width: none;
+
+    mix-blend-mode: multiply;
+    filter: blur(.5px);
+}
+
+.page-background__pattern--1{
+    top:0;
+    left:0;
+    transform:rotate(270deg);
+    opacity:.6;
+}
+
+.page-background__pattern--2{
+    top:500px;
+    right:-100px;
+    opacity:.5;
+}
+
+.page-background__pattern--3{
+    top:1200px;
+    left:105px;
+    transform:rotate(180deg);
+    opacity:.5;
+}
+
+.page-background__pattern--4{
+    bottom:0;
+    right:-58px;
+    opacity:.5;
+}
+ */
+
+
+
+
+ 
+
+
+
+
+
 
 
 

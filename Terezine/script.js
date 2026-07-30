@@ -133,3 +133,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
+// кнопка з телефоном, яка відкриває модальне вікно
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById('modal');
+  const openBtn = document.getElementById('openModal');
+  const closeBtn = document.getElementById('closeModal');
+
+  openBtn.onclick = () => modal.style.display = 'flex';   // показати і центрувати
+  closeBtn.onclick = () => modal.style.display = 'none';  // сховати
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+});
+
+
+
+
+// СЛАЙДЕР
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+      dots[i].classList.toggle("active", i === index);
+    });
+    currentIndex = index;
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = parseInt(dot.getAttribute("data-index"));
+      showSlide(index);
+    });
+  });
+
+  setInterval(() => {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }, 5000);
+});

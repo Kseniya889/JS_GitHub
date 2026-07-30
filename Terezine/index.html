@@ -10,18 +10,35 @@
 </head>
 <body>
 
-  <!-- <div class="img__svg">
-    <div class="container-bg">
-      <div class="background">
-        <img src="./pattern2.svg" class="pattern__img1">
-        <img src="./pattern2.svg" class="pattern__img2">
-        <img src="./pattern.svg" class="pattern__img3">
-        <img src="./pattern.svg" class="pattern__img4">
-      </div>
-    </div>
-  </div> -->
 
   <div class="page_wrapper">
+
+<!-- 
+  <div class="page-background">
+  <div class="page-background__container">
+
+    <img src="./img/bg/pattern2.svg"
+         alt=""
+         class="page-background__pattern page-background__pattern--1">
+
+    <img src="./img/bg/pattern2.svg"
+         alt=""
+         class="page-background__pattern page-background__pattern--2">
+
+    <img src="./img/bg/pattern.svg"
+         alt=""
+         class="page-background__pattern page-background__pattern--3">
+
+    <img src="./img/bg/pattern.svg"
+         alt=""
+         class="page-background__pattern page-background__pattern--4">
+
+  </div>
+</div>
+ -->
+
+
+
     <header class="header">
       <div class="container">
 
@@ -40,41 +57,68 @@
           <span class="lang-selector__text">UK</span>
           <span class="lang-selector__arrow"></span>
         </div>
-
+<!-- 
         <a href="tel:+380952876868" class="phone-button">
           <span class="phone-button__icon"></span>
-        </a>
-  <!-- 
-        <div class="slider">
-          <div class="slide active">
-            <img src="./img/news1.jpg" alt="1">
-          </div>
-          <div class="slide">
-            <img src="./img/news2.jpg" alt="2">
-          </div>
-          <div class="slide">
-            <img src="./img/news3.jpg" alt="3">
-          </div>
-        </div>
+        </a> -->
 
-        <div class="slider__dots">
-          <span class="slider__dot"></span>
-        </div> -->
+
+<!-- Кнопка телефону -->
+<button id="openModal" class="phone-button">
+  <span class="phone-button__icon"></span>
+</button>
+
+<!-- Модальне вікно -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <!-- кнопка закриття -->
+    <span id="closeModal" class="close">&times;</span>
+    <p class="modal__text">Зв’язатися з нами</p>
+    <p class="modal__number">+ (380) 95 287 68 68</p>
+  </div>
+</div>
+
+
 
       </div> 
     </header>
-  </div>
+  <!-- </div> -->
 
     <main class="main">
       <div class="container">
         <section class="main__hero">
-            <div class="hero__bg"></div>
-            <div class="hero_text">
-              <h1 class="hero__title">Продуманий простір, де інновації перетворюються на виробництво</h1>
-              <a href="#" class="hero__link" download>
-                Завантажити презентацію
-              </a>
-              </div>
+
+          <!-- фон затемнення -->
+          <div class="hero__bg"></div>
+
+          <!-- текст поверх фону -->
+          <div class="hero_text">
+            <h1 class="hero__title">Продуманий простір, де інновації перетворюються на виробництво</h1>
+            <a href="files/presentation.pdf" class="hero__link" download>
+              Завантажити презентацію
+            </a>
+          </div>
+
+          <!-- слайдер поверх фону -->
+          <div class="slider">
+            <div class="slide active">
+              <img src="./img/hero_bg.jpg" alt="Слайд 1">
+            </div>
+            <div class="slide">
+              <img src="./img/hero_bg.jpg" alt="Слайд 2">
+            </div>
+            <div class="slide">
+              <img src="./img/hero_bg.jpg" alt="Слайд 3">
+            </div>
+          </div>
+
+          <!-- кружечки -->
+          <div class="slider__dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+
         </section>
           
         <section class="concept">
@@ -470,28 +514,28 @@
                   
                   <div class="contact-form--main__field">
                     <label for="name" class="contact-form--main__label">Ім’я</label>
-                    <input type="text" id="name" name="name" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="1" required>
+                    <input type="text" id="name" name="name" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="0" required>
                   </div>
                   
                   <div class="contact-form--main__field">
                     <label for="email" class="contact-form--main__label">Email</label>
-                    <input type="email" id="email" name="email" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="2" required>
+                    <input type="email" id="email" name="email" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="0" required>
                   </div>
                   
                   <div class="contact-form--main__field">
                     <label for="phone" class="contact-form--main__label">Номер телефону</label>
-                    <input type="tel" id="phone" name="phone" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="3" required>
+                    <input type="tel" id="phone" name="phone" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="0" required>
                   </div>
                   
                   <div class="contact-form--main__field">
                     <label for="company" class="contact-form--main__label">Компанія</label>
-                    <input type="text" id="company" name="company" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="4" required>
+                    <input type="text" id="company" name="company" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="0" required>
                   </div>
 
 
                    <div class="contact-form--main__field--textarea">
                     <label for="message" class="contact-form--main__label contact-form--main__label--textarea">Ваше запитання</label>
-                    <textarea name="message" id="message" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="5"></textarea>
+                    <textarea name="message" id="message" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="0"></textarea>
                   </div>
 
 
@@ -680,29 +724,29 @@
               <div class="contact-form__intro">
               
               <div class="contact-form--main__field">
-                <label for="name" class="contact-form--main__label">Ім’я</label>
-                <input type="text" id="name" name="name" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="a1" required>
+                <label for="name_socials" class="contact-form--main__label">Ім’я</label>
+                <input type="text" id="name_socials" name="name_socials" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="0" required>
               </div>
               
               <div class="contact-form--main__field">
-                <label for="email" class="contact-form--main__label">Email</label>
-                <input type="email" id="email" name="email" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="a2" required>
+                <label for="email_socials" class="contact-form--main__label">Email</label>
+                <input type="email" id="email_socials" name="email_socials" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="0" required>
               </div>
               
               <div class="contact-form--main__field">
-                <label for="phone" class="contact-form--main__label">Номер телефону</label>
-                <input type="tel" id="phone" name="phone" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="a3" required>
+                <label for="phone_socials" class="contact-form--main__label">Номер телефону</label>
+                <input type="tel" id="phone_socials" name="phone_socials" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="0" required>
               </div>
               
               <div class="contact-form--main__field">
-                <label for="company" class="contact-form--main__label">Компанія</label>
-                <input type="text" id="company" name="company" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="a4" required>
+                <label for="company_socials" class="contact-form--main__label">Компанія</label>
+                <input type="text" id="company_socials" name="company_socials" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="0" required>
               </div>
 
 
                 <div class="contact-form--main__field--textarea">
-                <label for="message" class="contact-form--main__label contact-form--main__label--textarea">Ваше запитання</label>
-                <textarea name="message" id="message" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="a5"></textarea>
+                <label for="message_socials" class="contact-form--main__label contact-form--main__label--textarea">Ваше запитання</label>
+                <textarea name="message_socials" id="message_socials" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="0"></textarea>
               </div>
 
 
@@ -742,7 +786,7 @@
           <div class="footer__branding">
             <img src="./img/header_logo.svg" alt="logo" class="footer__logo">
 
-            <a href="#" class="hero__link" download>
+            <a href="files/presentation.pdf" class="hero__link" download>
               Завантажити презентацію
             </a>
           </div>
@@ -756,7 +800,7 @@
             <a href="#" class="footer__link">Контакти</a>
           </nav>
 
-          <adress class="footer__contacts">
+          <address class="footer__contacts">
             <!-- <div class="contact__details-wrapper"> -->
               
             <div class="contact-form contact-form--services">
@@ -771,9 +815,9 @@
               <span class="contact-form__text contact-form__text--footer icon-phone">+ (380) 95 287 68 68</span>
             </div>
 
-          <!-- </div> -->
+          
 
-          </adress>
+          </address>
 
           <div class="footer__actions">
             <div class="footer__socials">
@@ -809,7 +853,7 @@
       </div>
       
     </footer>
-
+<!-- </div> -->
   </div>
 
 
