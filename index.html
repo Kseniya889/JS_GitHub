@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Індустріальний парк Терезине</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+
+
+  <div class="page_wrapper">
+
+    <!-- BACKGROUND -->
+  <!-- <div class="background_img__svg">
+        <img src="./img/bg/pattern2.svg" class="decor pattern-1 pattern-1-1">
+        <img src="./img/bg/pattern2.svg" class="decor pattern-1 pattern-1-2">
+        <img src="./img/bg/pattern.svg" class="decor pattern-2 pattern-2-1">
+        <img src="./img/bg/pattern.svg" class="decor pattern-2 pattern-2-2">
+  </div> -->
+ 
+    <!--  -->
+
+
+    <header class="header">
+      <div class="container">
+
+
+
+        <img src="./img/header_logo.svg" alt="logo" class="header__logo">
+        <nav class="header__nav">
+          <a href="#" class="header__link">Концепція</a>
+          <a href="#" class="header__link">Переваги</a>
+          <a href="#" class="header__link">Співпраця</a>
+          <a href="#" class="header__link">Статус проєкту</a>
+          <a href="#" class="header__link">Новини</a>
+          <a href="#" class="header__link">Контакти</a>
+        </nav>
+
+
+        <div class="header__actions">
+        <div class="lang-selector">
+          <span class="lang-selector__icon1"></span>
+          <span class="lang-selector__text">UK</span>
+          <span class="lang-selector__arrow"></span>
+        </div>
+<!-- 
+        <a href="tel:+380952876868" class="phone-button">
+          <span class="phone-button__icon"></span>
+        </a> -->
+
+
+<!-- Кнопка телефону -->
+<button id="openModal" class="phone-button">
+  <span class="phone-button__icon"></span>
+</button>
+
+<!-- Модальне вікно -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <!-- кнопка закриття -->
+    <span id="closeModal" class="close">&times;</span>
+    <p class="modal__text">Зв’язатися з нами</p>
+    <p class="modal__number">+ (380) 95 287 68 68</p>
+  </div>
+</div>
+
+</div>
+
+
+      </div> 
+    </header>
+  <!-- </div> -->
+
+    <main class="main">
+      
+      
+      <section class="main__hero">
+
+        <!-- фон затемнення -->
+        <div class="hero__bg"></div>
+
+        <!-- текст поверх фону -->
+        <div class="hero_text">
+          <h1 class="hero__title">Продуманий простір, де інновації перетворюються на виробництво</h1>
+          <a href="files/presentation.pdf" class="hero__link" download>
+            Завантажити презентацію
+          </a>
+        </div>
+
+        <!-- слайдер поверх фону -->
+        <div class="slider">
+          <div class="slide active">
+            <img src="./img/hero_bg.jpg" alt="Слайд 1">
+          </div>
+          <div class="slide">
+            <img src="./img/advantages.jpg" alt="Слайд 2">
+          </div>
+          <div class="slide">
+            <img src="./img/hero_bg.jpg" alt="Слайд 3">
+          </div>
+        </div>
+
+        <!-- кружечки -->
+        <div class="slider__dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+
+      </section>
+      
+      <div class="container">
+
+                
+        <section class="concept">
+          <h2 class="section-title concept__title">Концепція</h2>
+          <div class="concept__wrapper">
+            <div class="concept-info">
+              <h3 class="subtitle concept-info__subtitle">Місце, де оживає промисловість та зароджується нова економіка</h3>
+
+              <div class="stats stats--concept">
+                <h3 class="stats__title">Ми маємо:</h3>
+                <div class="stats__list" style="--cols:3">
+
+                  <div class="stats__item">
+                    <div class="stats__label">Всього</div>
+                    <div class="stats__value">39 земельних ділянок</div>
+                  </div>
+
+                  <div class="stats__item">
+                    <div class="stats__label">Форма власності</div>
+                    <div class="stats__value">приватна власність та оренда</div>
+                  </div>
+
+                  <div class="stats__item">
+                    <div class="stats__label">Тип ділянок</div>
+                    <div class="stats__value">greenfield</div>
+                  </div>
+
+                  <div class="stats__item">
+                    <div class="stats__label">Загальна площа парку </div>
+                    <div class="stats__value">42,5 га</div>
+                  </div>
+
+                  <div class="stats__item">
+                    <div class="stats__label">Інженерні комунікації</div>
+                    <div class="stats__value">поруч з парком</div>
+                  </div>
+
+                </div>
+              </div>
+          
+              <div class="stats stats--plans">
+                <h3 class="stats__title">Заплановано будівництво:</h3>
+                <div class="stats__list" style="--cols:2">
+
+                  <div class="stats__item">
+                    <div class="stats__label">Промислові будівель </div>
+                    <div class="stats__value">115 920 кв.м.</div>
+                  </div>
+                  
+                  <div class="stats__item">
+                    <div class="stats__label">Складських будівель</div>
+                    <div class="stats__value">20 800 кв.м.</div>
+                  </div>
+
+                  <div class="stats__item">
+                    <div class="stats__label">Адміністративних будівель</div>
+                    <div class="stats__value">8 640 кв.м.</div>
+                  </div>
+
+                  <div class="stats__item">
+                    <div class="stats__label">Технічних будівель</div>
+                    <div class="stats__value">3 783 кв.м.</div>
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="frame concept__img-wrapper">
+              <img src="./img/сoncept1.jpg" alt="Concept" class="concept__img">
+            </div>
+          </div>
+        </section>
+
+        <section class="socio-economic">
+          <div class="frame frame--right socio-economic__img-wrapper ">
+            <img src="./img/сoncept2.jpg" alt="" class="concept__img socio-economic__img">
+          </div>  
+          <div class="socio-economic__wrapper" >
+            <h3 class="subtitle socio-economic__subtitle">Соціально-економічний вплив</h3>
+              <ul class="socio-economic__lists  small-text">
+                <li class="socio-economic__text">Активний розвиток агрохарчової промисловості</li>
+                <li class="socio-economic__text">Збільшення інвестиційної привабливості регіону як для українських виробників, так і для іноземних компаній</li>
+                <li class="socio-economic__text">Розвиток інновацій та впровадження новітніх технологій</li>
+                <li class="socio-economic__text">Збільшення конкурентоспроможності українських виробників на внутрішньому та зовнішніх ринках</li>
+                <li class="socio-economic__text">Зростання податкових надходжень</li>
+                <li class="socio-economic__text">Створення нових робочих місць</li>
+                <li class="socio-economic__text">Розвиток «зеленої» енергетики</li>
+              </ul>
+          </div>
+        </section>
+
+        <section class="park-details">
+          <h2 class="section-title park-details__title">Переваги парку</h2>
+
+          <div class="advantages__list-wrapper">
+            <ul class="advantages__list">
+
+              <li class="advantages__item">
+                <button class="advantages__button advantages__button--active" data-target="01">
+                  <span class="advantages__number">01</span>
+                  <span class="advantages__text">Вигідне місцезнаходження та транспортне сполучення</span>
+                </button>
+              </li>
+
+              <li class="advantages__item">
+                <button class="advantages__button" data-target="02">
+                  <span class="advantages__number">02</span>
+                  <span class="advantages__text">Інженерна інфраструктура</span>
+                </button>
+              </li>
+
+              <li class="advantages__item">
+                <button class="advantages__button" data-target="03">
+                  <span class="advantages__number">03</span>
+                  <span class="advantages__text">Фінансові вигоди та державна підтримка</span>
+                </button>
+              </li>
+
+              <li class="advantages__item">
+                <button class="advantages__button" data-target="04">
+                  <span class="advantages__number">04</span>
+                  <span class="advantages__text">Кадровий потенціал та соціальна інтеграція</span>
+                </button>
+              </li>
+
+              <li class="advantages__item">
+                <button class="advantages__button" data-target="05">
+                  <span class="advantages__number">05</span>
+                  <span class="advantages__text">Вигідне сусідство компаній</span>
+                </button>
+              </li>
+
+              <li class="advantages__item">
+                <button class="advantages__button" data-target="06">
+                  <span class="advantages__number">06</span>
+                  <span class="advantages__text">Централізований супровід від керуючої компанії</span>
+                </button>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="advantages__details advantages__details--01 advantages__details--active">
+
+            <div class="details-panel details-panel--location">
+
+              <div class="park-details__section">
+                <div class="infrastructure__wrapper">
+                  <ul class="infrastructure__list  small-text">
+                    <li class="infrastructure__item">
+                      <span class="infrastructure__text">Фактичне місцезнаходження парку - 82-й км автомагістралі Київ-Одеса</span>
+                    </li>
+                    <li class="infrastructure__item">
+                      <span class="infrastructure__text"> Розгалужена мережа автомобільних доріг (М05/Е95, Р32, Р04)</span>
+                    </li>
+                    <li class="infrastructure__item">
+                      <span class="infrastructure__text">Діюча вантажна станція «Роток» на території індустріального парку</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="park-details__section2">
+                <div class="distances__wrapper">
+                  <h4 class="section-title--distances section-title--small-icon">Відстані до:</h4>
+                  <ul class="distances__list">
+
+                    <li class="distances__item">
+                      <span class="distances__text">центру міста Біла Церква</span>
+                      <span class="distances__number number">6,5 км</span>
+                    </li>
+
+                    <li class="distances__item">
+                      <span class="distances__text">Білоцерківського вантажного авіаційного комплексу</span>
+                      <span class="distances__number">17 км</span>
+                    </li>
+
+                    <li class="distances__item">
+                      <span class="distances__text">до аеропорту м.Бориспіль</span>
+                      <span class="distances__number">120 км</span>
+                    </li>
+                    
+
+                    <li class="distances__item">
+                      <span class="distances__text">до м.Київ</span>
+                      <span class="distances__number">82 КМ</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="entrances__wrapper">
+                <h4 class="section-title-entrances section-title--small-icon">Заїзди до парку:</h4>
+                <ul class="entrances__list">
+
+                  <li class="entrances__item">
+                    <span class="entrances__text">М05/Е95 — Київ – Одеса</span>
+                  </li>
+                  
+                  <li class="entrances__item">
+                    <span class="entrances__text">Вулиця Храпачанська місто Біла Церква</span>
+                  </li>
+
+                  <li class="entrances__item">
+                    <span class="entrances__text">Вулиця Івана Кожедуба місто Біла Церква</span>
+                  </li>
+
+                </ul>
+              </div>
+
+              <a href="#" class="btn map-link">
+                Переглянути на карті
+              </a>
+            </div>
+
+            <img src="./img/advantages.jpg" alt="" class="park-details__img">
+          </div>
+
+          <div class="advantages__details advantages__details--02">
+            <div class="details-panel details-panel--resources">
+
+              <ul class="resources__list">
+                <li class="resources__item resources__item--gas">Наявна потужність: 80 МВт (2 трансформатори по 40 МВт)Напруга: ПС-110/35/10</li>
+                <li class="resources__item resources__item--power">Наявна потужність: до 125 000 м³/год Діаметр трубопроводу: 215 мм Тиск: високий Категорія: 1</li>
+                <li class="resources__item resources__item--renewable">Передбачається використання сонячної та вітрової енергії</li>
+                <li class="resources__item resources__item--water">На етапі проектування найоптимальніших рішень для цілей парку</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="advantages__details advantages__details--03">
+            <div class="details-wrapper">
+              <div class="details-panel details-panel--finance">
+                <h4 class="section-title section-title--medium">Державне стимулювання</h4>
+                <ul class="finance__list finance__list--state">
+                  <li class="finance__item small-text small-text--ls-none">Звільнення від сплати ввізного мита та ПДВ при імпорті нового обладнання</li>
+                  <li class="finance__item small-text small-text--ls-none">Звільнення від оподаткування прибутку протягом 10 років</li>
+                  <li class="finance__item small-text small-text--ls-none">Грантові програми для бізнесу в Україні</li>
+                </ul>
+
+                <h4 class="section-title section-title--medium">Преференції від місцевих органів влади</h4>
+                <ul class="finance__list finance__list--state">
+                  <li class="finance__item small-text small-text--ls-none">Звільнення від сплати земельного податку</li>
+                  <li class="finance__item small-text small-text--ls-none">Зменшення ставки податку на нерухоме майно</li>
+                </ul>
+
+                <h4 class="section-title section-title--medium">Партнерська підтримка</h4>
+                <ul class="finance__list finance__list--state">
+                  <li class="finance__item small-text small-text--ls-none">Вигідні умови фінансової взаємодії між учасниками парку</li>
+                  <li class="finance__item small-text small-text--ls-none">Можливості використання сервісу оплати частинами для бізнесу</li>
+                </ul>
+                  
+              </div>
+              <div class="details__finance-img">
+                <img src="./img/finance__img.jpg" alt="finance__img" class="finance__img">
+              </div>
+            </div>  
+          </div>
+
+          <div class="advantages__details advantages__details--04">
+            <div class="details-panel details-panel--staff">
+
+              <div class="section__details--workforce">
+                <ul class="workforce__list">
+                  
+                  <li class="workforce__item ">
+                    <span class="workforce__icon workforce__icon--1"></span>
+                    <div class="workforce__content">
+                      <span class="workforce__text--1 section-title--small">Чисельність населення</span>
+                      <span class="workforce__number number">431 тис. осіб</span>
+                    </div>
+                  </li>
+                    
+                  <li class="workforce__item">
+                    <span class="workforce__icon workforce__icon--2"></span>
+                    <div class="workforce__content">
+                      <span class="workforce__text--2 section-title--small">Працездатне населення</span>
+                      <span class="workforce__number number">196 тис. осіб</span>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="section__details--education">
+                  <h4 class="section-title--education section-title--small">Активна співпраця з навчальними закладами:</h4>
+                  <ul class="education__list small-text">
+                    <li class="education__item">Розширює можливості для залучення талановитих молодих фахівців</li>
+                    <li class="education__item">Відкриває доступ до наукового потенціалу навчальних закладів</li>
+                    <li class="education__item">Робить доступним впровадження інновацій та розробку нових продуктів</li>
+                  </ul>
+              </div>
+
+
+              <div class="section__details--employment">
+                <h4 class="section-title--employment section-title--small">Фахова співпраця з Білоцерківською філією Київського обласного центру зайнятості сприяє:</h4>
+                <ul class="employment__list small-text">
+                  <li class="employment__item">Вирішенню кадрових потреб, шляхом проведення ярмарків вакансій для резидентів парку</li>
+                  <li class="employment__item">Проведенню професійної підготовки та перепідготовки кадрів</li>
+                </ul>
+              </div>
+
+
+            </div>
+            <!-- <div class="details__img-wrapper"> -->
+            <img src="./img/staff_img.jpg" alt="staff_img" class="details__img--staff">
+            <!-- </div> -->
+          </div>
+          
+          <div class="advantages__details advantages__details--05">
+            <div class="details-panel details-panel--neighbors">
+              <ul class="neighbors__list">
+
+                <li class="neighbors__item">
+                  <img src="./img/btn5_neighbors_1.png" alt="Агротрейд 2000" class="neighbors__img">
+                  <span class="neighbors__text">Олійноекстракційний завод, експерт в зберіганні та переробці зернових та олійних культур.</span>
+                </li>
+                
+
+                <li class="neighbors__item">
+                  <img src="./img/btn5_neighbors_2.png" alt="Rollton" class="neighbors__img">
+                  <span class="neighbors__text">Виробник локшини та пюре Rollton компанія “Маревен Фуд Україна” </span>
+                </li>
+
+                <li class="neighbors__item">
+                  <img src="./img/btn5_neighbors_3.png" alt="PANECO" class="neighbors__img">
+                  <span class="neighbors__text">Провідна будівельна компанія з СІП-панелей в Україні.</span>
+                </li>
+
+                <li class="neighbors__item">
+                  <img src="./img/btn5_neighbors_4.png" alt="DEMETRA" class="neighbors__img">
+                  <span class="neighbors__text">Компанія «Деметра» - спеціалізується на будівництві, реконструкції та сервісному обслуговуванні елеваторів по всій Україні та лазерній обробці металу.</span>
+                </li>
+
+                <li class="neighbors__item">
+                  <img src="./img/btn5_neighbors_5.png" alt="Rplast" class="neighbors__img">
+                  <span class="neighbors__text">ТОВ «Р-пласт» - трубний завод.</span>
+                </li>
+
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="advantages__details advantages__details--06">
+            <div class="details-panel details-panel--management">
+              <div class="services-panel">
+                <ul class="services-list">
+                  <li class="services-item">Вибір території під запит резидента</li>
+                  <li class="services-item">Проєктування</li>
+                  <li class="services-item">Будівництво промислових об’єктів</li>
+                  <li class="services-item">Консалтингові послуги</li>
+                  <li class="services-item">Створення та управління інфраструктурою парку</li>
+                  <li class="services-item">Обслуговування після запуску проєкту</li>
+                </ul>
+
+                <div class="company-info">Товариство з обмеженою відповідальністю «Смарт менеджмент парк»</div>
+                
+
+                <div class="contact-form_wrapper">
+                  <div class="contact-form contact-form--services">
+                    <span class="contact-form__label icon-phone">Телефон</span>
+                    <span class="contact-form__text">+ (380) 96 287 68 60</span>
+                  </div>
+                  
+                  <div class="contact-form contact-form--services">
+                    <span class="contact-form__label icon-email">Пошта</span>
+                    <span class="contact-form__text">smart.mpark@gmail.com</span>
+                  </div>
+                </div>
+
+
+              </div>
+              
+
+
+
+
+              <div class="contact-form contact-form--main">
+
+                <h2 class="contact-form--main_title">Є питання? Напишіть нам</h2>
+
+                <form class="contact-form--main__form">
+
+                  <div class="contact-form__intro">
+                  
+                  <div class="contact-form--main__field">
+                    <label for="name" class="contact-form--main__label">Ім’я</label>
+                    <input type="text" id="name" name="name" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="0" required>
+                  </div>
+                  
+                  <div class="contact-form--main__field">
+                    <label for="email" class="contact-form--main__label">Email</label>
+                    <input type="email" id="email" name="email" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="0" required>
+                  </div>
+                  
+                  <div class="contact-form--main__field">
+                    <label for="phone" class="contact-form--main__label">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="0" required>
+                  </div>
+                  
+                  <div class="contact-form--main__field">
+                    <label for="company" class="contact-form--main__label">Компанія</label>
+                    <input type="text" id="company" name="company" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="0" required>
+                  </div>
+
+
+                   <div class="contact-form--main__field--textarea">
+                    <label for="message" class="contact-form--main__label contact-form--main__label--textarea">Ваше запитання</label>
+                    <textarea name="message" id="message" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="0"></textarea>
+                  </div>
+
+
+
+                  </div>
+
+
+
+
+
+                  <div class="contact-form__extras">
+
+                  <div class="contact-form--main__field--attachment">
+                    <input type="file" id="attachment" name="attachment" class="contact-form--main__input contact-form--main__input--attachment" placeholder="Ваш коментар...">
+                    <label for="attachment" class="contact-form--main__label--attachment">Прикріпити файл</label>
+                  </div>
+
+                  <div class="contact-form--main__field--checkbox">
+                    <input type="checkbox" id="checkbox" name="checkbox" class="contact-form--main__input contact-form--main__input--checkbox" placeholder="Ваш коментар...">
+                    <label for="checkbox" class="contact-form--main__label--checkbox">Я приймаю<a href="#" class="vis-underline"> Умови використання</a> та надаю згоду на обробку своїх персональних даних відповідно до <a href="#" class="vis-underline">Повідомлення про приватність</a>.</label>
+                  </div>
+
+                  <div class="contact-form__extras_btn">
+                    <button class="contact-form__submit" type="submit">Надіслати</button>
+                  </div>
+                  </div>
+
+
+
+                </form>
+
+               
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </section>
+          
+        <section class="cooperation__section">
+          <h2 class="section-title cooperation__title">Співпраця</h2>
+
+          <div class="cooperation__block-btn__wrapper">
+            <ul class="cooperation__list">
+              <li class="cooperation__item" >
+                <button type="button" class="cooperation__button cooperation__button--active js-toggle" data-target="c1" aria-pressed="true">
+                  <span class="cooperation__number">01</span>
+                  <span class="cooperation__text">Оренда/суборенда земельної ділянки з правом забудови</span>
+                </button>
+              </li>
+
+              <li class="cooperation__item">
+                <button type="button" class="cooperation__button js-toggle" data-target="c2" aria-pressed="false">
+                  <span class="cooperation__number">02</span>
+                  <span class="cooperation__text">Продаж земельної ділянки</span>
+                </button>
+              </li>
+
+              <li class="cooperation__item">
+                <button type="button" class="cooperation__button js-toggle" data-target="c3" aria-pressed="false">
+                  <span class="cooperation__number">03</span>
+                  <span class="cooperation__text">Будівництво під замовлення</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cooperation__details-btn__wrapper">
+
+            <div class="cooperation__details cooperation__details--c1 cooperation__details--active" data-panel="c1">
+            </div>
+            
+            <div class="cooperation__details cooperation__details--c2" data-panel="c2" hidden>
+            </div>
+
+            <div class="cooperation__details cooperation__details--c3" data-panel="c3" hidden>
+            </div>
+
+          </div>
+
+          <div class="status__wrapper">
+            <div class="frame frame--right status__img-wrapper ">
+              <img src="./img/status.jpg" alt="" class="concept__img status__img">
+            </div>  
+            <div class="status__info" >
+              <h3 class="status__subtitle">Статус проєкту <span class="status__year">2025</span></h3>
+              <ul class="status__lists  small-text">
+                <li class="status__text">Рішенням ініціатора створення - Товариством з обмеженою відповідальністю «Індустріальний парк «Терезине» створено Індустріальний парк «Терезине» строком на 30 років</li>
+                <li class="status__text">Затверджено Концепцію Індустріального парку «Терезине»</li>
+                <li class="status__text">Обрано керуючою компанією Товариство з обмеженою відповідальністю «СМАРТ МЕНЕДЖМЕНТ ПАРК» та укладено договір про створення та функціонування індустріального парку</li>
+                <li class="status__text">Подано Заяву до Міністерства економіки України про включення Індустріального парку «Терезине» до Реєстру індустріальних парків</li>
+                <li class="status__text">Проведено заходи для залучення фінансування та побудови партнерської мережі Проєкту</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="news__section" aria-labelledby="news-title">
+                  <h2 id="news-title" class="section-title news__title">Новини</h2>
+
+                  <div class="news__wrapper">
+
+                    <article class="news__card">
+                      <a href="/news/1" class="news__link">
+                        <img src="./img/news1.jpg" alt="news1" class="news__img">
+                        <div class="news__body">
+                          <time class="news__date" datetime="2025-06-05">05.06.2025</time>
+                          <p class="news__text">Ініціатор створення індустріального парку «Терезине» разом із...</p>
+                        </div>
+                        <span class="news__readmore">Читати далі</span>
+                      </a>
+                    </article>
+
+                    <article class="news__card">
+                      <a href="/news/2" class="news__link">
+                        <img src="./img/news2.jpg" alt="news1" class="news__img">
+                        <div class="news__body">
+                          <time class="news__date" datetime="2025-06-05">05.06.2025</time>
+                          <p class="news__text">4 червня 2025 року підписано Меморандум про взаєморозуміння...</p>
+                        </div>
+                        <span class="news__readmore">Читати далі</span>
+                      </a>
+                    </article>
+
+                    <article class="news__card">
+                      <a href="/news/3" class="news__link">
+                        <img src="./img/news3.jpg" alt="news1" class="news__img">
+                        <div class="news__body">
+                          <time class="news__date" datetime="2025-06-05">05.06.2025</time>
+                          <p class="news__text">За сприяння Агенції регіонального розвитку Київщини Індустріальний...</p>
+                        </div>
+                        <span class="news__readmore">Читати далі</span>
+                      </a>
+                    </article>
+
+
+                  </div>
+        </section>
+
+        <section class="contact__section">
+
+          <div class="contact__details">
+            <h2 class="section-title contact__title">Контакти</h2>
+
+            <div class="contact__details-wrapper">
+              <div class="contact-form contact-form--services">
+                <span class="contact-form__label icon-email">Пошта</span>
+                <span class="contact-form__text">smart.mpark@gmail.com</span>
+              </div>
+            
+              <div class="contact-form contact-form--services">
+                <span class="contact-form__label icon-address">Адреса</span>
+                <span class="contact-form__text">Україна, Київська область, Білоцерківський район, Автодорога Київ - Одеса 82 км + 500 м.</span>
+              </div>
+            
+              <div class="contact-form contact-form--services">
+                <span class="contact-form__label icon-phone">Телефон</span>
+                <span class="contact-form__text">+ (380) 95 287 68 68</span>
+              </div>
+
+              <div class="contacts__button">
+                <a href="#" class="btn map-link map-link--contacts">
+                  Переглянути на карті
+                </a>
+              </div>
+            </div>
+
+            <div class="contacts__socials">
+              <a href="" class="social-link social-link--facebook" aria-label="Facebook"></a>
+              <a href="" class="social-link social-link--instagram" aria-label="instagram"></a>
+              <a href="" class="social-link social-link--linkedin" aria-label="linkedin"></a>
+            </div>
+
+          </div>  
+
+          <div class="frame contact-form contact-form--main">
+
+            <h2 class="contact-form--main_title">Є питання? Напишіть нам</h2>
+
+            <form class="contact-form--main__form">
+
+              <div class="contact-form__intro">
+              
+              <div class="contact-form--main__field">
+                <label for="name_socials" class="contact-form--main__label">Ім’я</label>
+                <input type="text" id="name_socials" name="name_socials" class="contact-form--main__input" placeholder="Введіть ім’я..." tabindex="0" required>
+              </div>
+              
+              <div class="contact-form--main__field">
+                <label for="email_socials" class="contact-form--main__label">Email</label>
+                <input type="email" id="email_socials" name="email_socials" class="contact-form--main__input" placeholder="Введіть Email..." tabindex="0" required>
+              </div>
+              
+              <div class="contact-form--main__field">
+                <label for="phone_socials" class="contact-form--main__label">Номер телефону</label>
+                <input type="tel" id="phone_socials" name="phone_socials" class="contact-form--main__input" placeholder="+ (380) __ ___ __ __" tabindex="0" required>
+              </div>
+              
+              <div class="contact-form--main__field">
+                <label for="company_socials" class="contact-form--main__label">Компанія</label>
+                <input type="text" id="company_socials" name="company_socials" class="contact-form--main__input" placeholder="Введіть назву компаніі..." tabindex="0" required>
+              </div>
+
+
+                <div class="contact-form--main__field--textarea">
+                <label for="message_socials" class="contact-form--main__label contact-form--main__label--textarea">Ваше запитання</label>
+                <textarea name="message_socials" id="message_socials" class="contact-form--main__input contact-form--main__input--textarea" placeholder="Ваш коментар..." tabindex="0"></textarea>
+              </div>
+
+
+
+              </div>
+
+
+              <div class="contact-form__extras">
+
+              <div class="contact-form--main__field--attachment">
+                <input type="file" id="attachment" name="attachment" class="contact-form--main__input contact-form--main__input--attachment" >
+                <label for="attachment" class="contact-form--main__label--attachment">Прикріпити файл</label>
+              </div>
+
+              <div class="contact-form--main__field--checkbox">
+                <input type="checkbox" id="checkbox" name="checkbox" class="contact-form--main__input contact-form--main__input--checkbox">
+                <label for="checkbox" class="contact-form--main__label--checkbox">Я приймаю<a href="#" class="vis-underline"> Умови використання</a> та надаю згоду на обробку своїх персональних даних відповідно до <a href="#" class="vis-underline">Повідомлення про приватність</a>.</label>
+              </div>
+
+              <div class="contact-form__extras_btn">
+                <button class="contact-form__submit" type="submit">Надіслати</button>
+              </div>
+              </div>
+            </form>
+
+          </div>
+
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+
+        <div class="container">
+
+          <div class="footer__branding">
+            <img src="./img/header_logo.svg" alt="logo" class="footer__logo">
+
+            <a href="files/presentation.pdf" class="hero__link" download>
+              Завантажити презентацію
+            </a>
+          </div>
+
+          <nav class="footer__nav">
+            <a href="#" class="footer__link">Концепція</a>
+            <a href="#" class="footer__link">Співпраця</a>
+            <a href="#" class="footer__link">Статус проєкту</a>
+            <a href="#" class="footer__link">Новини</a>
+            <a href="#" class="footer__link">Переваги</a>
+            <a href="#" class="footer__link">Контакти</a>
+          </nav>
+
+          <address class="footer__contacts">
+            <!-- <div class="contact__details-wrapper"> -->
+              
+            <div class="contact-form contact-form--services">
+              <span class="contact-form__text contact-form__text--footer icon-address">Україна, Київська область, Білоцерківський район, Автодорога Київ - Одеса 82 км + 500 м.</span>
+            </div>
+              
+            <div class="contact-form contact-form--services">
+              <span class="contact-form__text contact-form__text--footer icon-email">ip.terezyne@gmail.com</span>
+            </div>
+
+            <div class="contact-form contact-form--services">
+              <span class="contact-form__text contact-form__text--footer icon-phone">+ (380) 95 287 68 68</span>
+            </div>
+
+          
+
+          </address>
+
+          <div class="footer__actions">
+            <div class="footer__socials">
+              <div class="contacts__socials">
+                <a href="" class="social-link social-link--facebook" aria-label="Facebook"></a>
+                <a href="" class="social-link social-link--instagram" aria-label="instagram"></a>
+                <a href="" class="social-link social-link--linkedin" aria-label="linkedin"></a>
+              </div>
+            </div>
+
+            <div class="footer__language">
+              <div class="lang-selector">
+                <span class="lang-selector__icon1"></span>
+                <span class="lang-selector__text">UK</span>
+                <span class="lang-selector__arrow"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      
+      <div class="footer__bottom">
+        <div class="container">
+          <span class="copyright">2025 © Всі права захищено.</span>
+
+          <div class="footer__developer">
+            <span class="developer__text">Розробка сайтів</span>
+            <img src="./img/footer_logoOLEUS.svg" alt="OLEUS" class="developer__img">
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+<!-- </div> -->
+  </div>
+
+
+</body>
+</html>
