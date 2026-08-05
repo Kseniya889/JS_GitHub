@@ -53,12 +53,20 @@ body{
   position: relative;
 }
 
-.container{
-  max-width: 1518px;
+/* .container{
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
+} */
+
+
+.container{
+    width:min(100%,1600px);
+    margin-inline:auto;
+    padding-inline:40px;
 }
+
 
 .section-title {
   font-weight: 600;
@@ -96,6 +104,10 @@ body{
   margin-right: 8px;
 }
 
+.page_wrapper{
+  overflow:hidden;
+}
+
 
 /*-------------------
         HEADER
@@ -115,7 +127,7 @@ body{
   align-items: center;
   justify-content: space-between;
   /* margin: 0 auto; */
-  padding: 20px 80px;
+  padding: 20px 40px;
 
   /* border: 1px solid red; */
 }
@@ -299,6 +311,7 @@ padding-top: 109px; /*висота хедера*/
   background-repeat: no-repeat;
   height: calc(100vh - 109px);
   position: relative;
+    overflow: hidden; /* щоб нічого не вилазило */
 }
 
 .main__hero:after{
@@ -354,6 +367,7 @@ padding-top: 109px; /*висота хедера*/
 
 .concept {
   padding: 116px 0 164px;
+   background:#fff;
 }
 
 .concept__wrapper{
@@ -445,6 +459,7 @@ padding-top: 109px; /*висота хедера*/
   display: flex;
   gap: 124px;
   margin-bottom: 176px;
+  background:#fff;
 }
 
 .socio-economic__text {
@@ -456,6 +471,9 @@ padding-top: 109px; /*висота хедера*/
 
 .advantages__list-wrapper {
   margin-top: 48px;
+ 
+  z-index: 1;
+  position: relative;
 }
 
 .advantages__list{
@@ -476,6 +494,7 @@ padding-top: 109px; /*висота хедера*/
   background-color: #FEF0E8;
   gap: 20px;
   cursor: pointer;
+  /* background:#fff; */
 }
 
 .advantages__button--active{
@@ -517,11 +536,17 @@ padding-top: 109px; /*висота хедера*/
 
 .advantages__details {
   display: none;
+ position: relative;
+  z-index: 1;
+
 }
 
 .advantages__details--01 {
   justify-content: space-between;
   margin-top: 64px;
+  /* position: relative;
+  z-index: 1; */
+
 }
 
 .advantages__details--active {
@@ -573,6 +598,7 @@ padding-top: 109px; /*висота хедера*/
 
 .park-details__img{
   max-width: 702px;
+ 
 }
 
 
@@ -1085,7 +1111,7 @@ color: #6B6B6B;
 /*------cooperation__section------*/
 
 .cooperation__section{
-  margin-top: 64px;
+  margin-top: 130px;
 }
 
 .cooperation__title{
@@ -1110,6 +1136,7 @@ color: #6B6B6B;
   background-color: #FEF0E8;
   gap: 20px;
   cursor: pointer;
+
 }
 
 .cooperation__button--active {
@@ -1184,7 +1211,8 @@ color: #6B6B6B;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 15px;
-  margin-bottom: 128px;
+  margin-bottom: 128px;.
+
 }
 
 .news__title{
@@ -1196,6 +1224,8 @@ color: #6B6B6B;
   box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid rgba(13, 79, 35, 0.13);
+    position: relative;
+  z-index: 1;
 }
 
 .news__link {
@@ -1309,6 +1339,8 @@ color: #6B6B6B;
   box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid #EAEAEA;
+  position: relative;
+  z-index: 1;
 }
 
 .footer__top .container{
@@ -1316,6 +1348,7 @@ color: #6B6B6B;
   justify-content: space-between;
   align-items: flex-start;
   padding: 62px 110px 59px;
+ 
 }
 
 .footer__branding {
@@ -1345,6 +1378,11 @@ color: #6B6B6B;
 .contact-form__text--footer{
   display: flex;
 gap: 8px;
+
+font-weight: 400;
+font-size: 14px;
+color: #6B6B6B;
+
 }
 
 .footer__contacts {
@@ -1366,6 +1404,7 @@ gap: 8px;
 .footer__actions {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 33px;
 }
 
@@ -1406,14 +1445,14 @@ gap: 8px;
 
 
 /*------SLADE------*/
-.main__hero {
+/* .main__hero {
   position: relative;
   background-image: url('./img/hero_bg.jpg');
   background-size: cover;
   background-position: center;
   height: calc(100vh - 109px); /* висота секції */
   overflow: hidden; /* щоб нічого не вилазило */
-}
+/* } */ 
 
 /* текст */
 .hero_text {
@@ -1476,92 +1515,52 @@ gap: 8px;
 }
 
 
-
-/* =========================================================
-   SVG BACKGROUND — TEST / FIX
-========================================================= */
 /* =========================================================
    SVG BACKGROUND
 ========================================================= */
 
-/* .main > .container {
-    width: 100%;
-    max-width: 1518px;
-    margin: 0 auto;
-
-    background-image: url("./img/bg/pattern1_1.svg");
-    background-repeat: no-repeat;
-
-    background-origin: border-box;
-    background-position: -9px 625px;
-    background-size: 1500px auto;
-
-    overflow: hidden;
-}
- */
-/* .main > .container {
-    width: 100%;
-    max-width: 1518px;
-    margin: 0 auto;
-
-    background-image: url("./img/bg/pattern1_1.svg");
-    background-repeat: no-repeat;
-
-    background-position: 0 625px;
-    background-size: 1518px auto;
-
-    overflow: hidden;
-
-
-     position: relative;
-} */
-
 
 /* pattern 1_bg concept*/
 .main > .container {
-    position: relative;
-    /* overflow: hidden; */
+     position: relative;
+    /* isolation: isolate; */
+    z-index: 1;
 }
 
 .concept {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
-.concept::after {
+.concept::before {
     content: "";
 
     position: absolute;
     /* top: calc(100% + 200px); */
     top: 0;
-    left: 0;
+   left: -40px;
 
-    width: 1518px;
-     height: 600vh;
+    width: 1600px;
+     height: 800vh;
+
+
 
     background-image: url("./img/bg/pattern1_1.svg");
     background-repeat: no-repeat;
     background-position: -70px -6px;
-    background-size: 100% auto;
+    background-size: 100% ;
 
-    z-index: 1;
+    z-index: -1;
     pointer-events: none;
 }
 
 
 
-
-
-
 /* pattern 1_bg concept*/
-.main > .container {
-    position: relative;
-    /* overflow: hidden; */
-}
 
 .socio-economic {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .socio-economic::after {
@@ -1570,9 +1569,9 @@ gap: 8px;
     position: absolute;
     /* top: calc(100% + 200px); */
     top: 0;
-    left: 0;
+    left: -40px;
 
-    width: 1518px;
+    width: 1600px;
      height: 600vh;
 
     background-image: url("./img/bg/pattern2.svg");
@@ -1580,43 +1579,94 @@ gap: 8px;
     background-position: -100px 390px;
     background-size: auto;
 
-    z-index: 1;
+    z-index: -1;
     pointer-events: none;
-}
+    
+} 
 
 
 
 
 
 /* pattern 1_bg concept*/
-.main > .container {
-    position: relative;
-    /* overflow: hidden; */
-}
 
 .cooperation__section {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
+
+
+
+.cooperation__section::before {
+ content: "";
+
+    position: absolute;
+    top: 0;
+   left: -40px;
+
+    width: 1600px;
+     height: 600vh;
+
+    background-image: url("./img/bg/pattern2.svg"), url("./img/bg/pattern3.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -100px 260px, -25px 270px;
+    background-size: auto auto;
+
+    z-index: -1;
+    pointer-events: none;
+
+}
+
+
+
 
 .cooperation__section::after {
     content: "";
 
     position: absolute;
-    /* top: calc(100% + 200px); */
     top: 0;
-    left: 0;
+  left: -40px;
 
-    width: 1518px;
+    width: 1600px;
+     height: 600vh;
+
+    background-image: url("./img/bg/pattern4.svg");
+    background-repeat: no-repeat;
+    background-position: -20px 775px;
+    background-size: auto;
+
+    z-index: -1;
+    pointer-events: none;
+}
+ 
+
+
+
+.contact__section {
+    position: relative;
+    z-index: 1;
+}
+
+
+.contact__section::before {
+ content: "";
+
+    position: absolute;
+    top: 0;
+    left: -40px;
+
+    width: 1600px;
      height: 600vh;
 
     background-image: url("./img/bg/pattern2.svg");
     background-repeat: no-repeat;
-    background-position: -100px 260px;
-    background-size: auto;
+    background-position: -100px 210px;
+    background-size: auto ;
 
-    z-index: 1;
+    z-index: -1;
     pointer-events: none;
+     /* overflow: hidden; */
+
 }
 
 
@@ -1631,66 +1681,7 @@ gap: 8px;
 
 
 
-/* pattern 2_bg advantages__list-wrapper*/
-/* .main > .container {
-    position: relative; */
-    /* overflow: hidden; */
-/* } */
-
-/* .socio-economic {
-    position: relative;
-    z-index: 2;
-    background-color: #fff;
-}
-
-.socio-economic::after {
-    content: "";
-
-    position: absolute; */
-    /* top: calc(100% + 200px); */
-    /* top: 0;
-    left: 0;
-
-    width: 1518px;
-    height: 200vh;
-
-    background-image: url("./img/bg/");
-    background-repeat: repeat-y;
-    background-position: -237px 551px; */
-    /* background-size: 1518px auto; */
-     /* background-size: 100% auto;
-
-    z-index: 1;
-    pointer-events: none;
-
-
-} */
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
