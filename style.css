@@ -335,7 +335,7 @@ body{
 
 .concept {
   padding: 116px 0 164px;
-   background:#fff;
+  background:#fff;
 }
 
 .concept__wrapper{
@@ -461,12 +461,11 @@ body{
   background-color: #FEF0E8;
   gap: 20px;
   cursor: pointer;
-  transition: box-shadow .3s ease, transform .3s ease;  
+  transition: box-shadow .3s ease;  
 }
 
 .advantages__button:hover{
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transform: scale(1.02);
 }
 
 
@@ -510,7 +509,7 @@ body{
 
 .advantages__details {
   display: none;
- position: relative;
+  position: relative;
   z-index: 1;
 }
 
@@ -568,7 +567,6 @@ body{
 
 .park-details__img{
   max-width: 702px;
- 
 }
 
 
@@ -1082,7 +1080,7 @@ color: #6B6B6B;
   padding: 16px 88px;
   cursor: pointer;
   flex: 0 0 auto; /*кнопка не розтягується*/
- transition:  box-shadow .3s ease,  opacity .3s ease;
+  transition:  box-shadow .3s ease,  opacity .3s ease;
 }
 
 .contact-form__submit:hover{
@@ -1125,15 +1123,13 @@ color: #6B6B6B;
   background-color: #FEF0E8;
   gap: 20px;
   cursor: pointer;
-  transition: box-shadow .3s ease, transform .3s ease;  
+  transition: box-shadow .3s ease;  
 }
-
 
 .cooperation__button:hover{
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transform: scale(1.02);
+  /* transform: scale(1.02); */
 }
-
 
 .cooperation__button--active {
   background-color: #EC6714;
@@ -1207,7 +1203,7 @@ color: #6B6B6B;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 15px;
-  margin-bottom: 128px;.
+  margin-bottom: 128px;
 }
 
 .news__title{
@@ -1260,8 +1256,6 @@ color: #6B6B6B;
   transition: transform .2s ease;  
 }
 
-
-
 .news__readmore::after {
   content: '';
   background: url(./img/line_arrow-right.svg) center/cover no-repeat;
@@ -1270,9 +1264,8 @@ color: #6B6B6B;
   height: 1.5em;
 }
 
-
 .news__readmore:hover{
- transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 
@@ -1446,14 +1439,6 @@ color: #6B6B6B;
 
 
 /*------SLADE------*/
-/* .main__hero {
-  position: relative;
-  background-image: url('./img/hero_bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh - 109px); /* висота секції */
-  overflow: hidden; /* щоб нічого не вилазило */
-/* } */ 
 
 /* текст */
 .hero_text {
