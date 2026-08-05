@@ -48,8 +48,6 @@ body{
   font-size: 1rem;
   line-height: 1.2;
   letter-spacing: -0.03em;
-  /* background-color: #333; */
-
   position: relative;
 }
 
@@ -62,9 +60,9 @@ body{
 
 
 .container{
-    width:min(100%,1600px);
-    margin-inline:auto;
-    padding-inline:40px;
+  width:min(100%,1600px);
+  margin-inline:auto;
+  padding-inline:40px;
 }
 
 
@@ -126,10 +124,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin: 0 auto; */
   padding: 20px 40px;
-
-  /* border: 1px solid red; */
 }
 
 .header__logo {
@@ -178,47 +173,37 @@ body{
 }
 
 .header__actions{
-display: flex;
+  display: flex;
   align-items: center;
   gap: 85px; 
 }
 
 
-/* 
-.phone-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1px;
-  padding: 12px 24px;
-  gap: 10px;
-
-  background-color: #0D4F23;
-} */
-
-
-
 /* Button */
 .phone-button {
-  background-color: #0D4F23; /* зелений фон */
+  background-color: #0D4F23; 
   border: none;
-  /* border-radius: 50%;        кругла форма */
   width: 48px;
   height: 48px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.phone-button:hover{
+    transform: scale(1.05);
+}
+
+
 
 .phone-button__icon {
   background: url('./img/header_call.svg') center/cover no-repeat;
   width: 24px;
   height: 24px;
 }
-
-
-
 
 .modal {
   display: none;              /* приховано за замовчуванням */
@@ -238,26 +223,23 @@ display: flex;
   text-align: center;
 }
 
-
 .modal__text {
-font-weight: 600;
-font-size: 32px;
-white-space: nowrap;
-padding-bottom: 27px;
+  font-weight: 600;
+  font-size: 32px;
+  white-space: nowrap;
+  padding-bottom: 27px;
 }
-
 
 .modal__number{
-font-weight: 400;
-font-size: 16px;
-white-space: nowrap;
+  font-weight: 400;
+  font-size: 16px;
+  white-space: nowrap;
 
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-
 
 .modal__number::before{
   content: '';
@@ -267,30 +249,11 @@ gap: 8px;
   height: 1.5em;
 }
 
-
 .close {
   display: none;
-  /* float: right;
-  font-size: 24px;
-  cursor: pointer; */
 }
 
 
-
-
-
-
-/* 
-
-
-
-
-.phone-button__icon {
-  background: url('img/header_call.svg') center/contain no-repeat;
-  width: 1.5em;
-  height: 1.5em;
-  display: inline-block;
-} */
 
 
 /*-------------------
@@ -298,7 +261,7 @@ gap: 8px;
 --------------------*/
 
 .main {
-padding-top: 109px; /*висота хедера*/
+  padding-top: 109px; /*висота хедера*/
 }
 
 
@@ -350,7 +313,12 @@ padding-top: 109px; /*висота хедера*/
 
   color: #FFFFFF;
   background: #EC6714;
+  transition:  box-shadow .3s ease,  opacity .3s ease;
+}
 
+.hero__link:hover{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  opacity: 0.9;
 }
 
 .hero__link::after{
@@ -376,7 +344,6 @@ padding-top: 109px; /*висота хедера*/
   justify-content: space-between;
   margin-top: 48px;
   gap: 90px;
-  /* max-height: 699px; */
 }
 
 .subtitle {
@@ -420,9 +387,9 @@ padding-top: 109px; /*висота хедера*/
 }
 
 .concept__img{
-    width:auto;
-    max-width:669px;
-    height:100%;
+  width:auto;
+  max-width:669px;
+  height:100%;
 }
 
 .frame {
@@ -494,8 +461,15 @@ padding-top: 109px; /*висота хедера*/
   background-color: #FEF0E8;
   gap: 20px;
   cursor: pointer;
-  /* background:#fff; */
+  transition: box-shadow .3s ease, transform .3s ease;  
 }
+
+.advantages__button:hover{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transform: scale(1.02);
+}
+
+
 
 .advantages__button--active{
   background-color: #EC6714;
@@ -538,15 +512,11 @@ padding-top: 109px; /*висота хедера*/
   display: none;
  position: relative;
   z-index: 1;
-
 }
 
 .advantages__details--01 {
   justify-content: space-between;
   margin-top: 64px;
-  /* position: relative;
-  z-index: 1; */
-
 }
 
 .advantages__details--active {
@@ -637,7 +607,18 @@ padding-top: 109px; /*висота хедера*/
 
   color: #FFFFFF;
   background: #0D4F23;
+  transition:  box-shadow .3s ease,  opacity .3s ease;
+
 }
+
+
+
+.map-link:hover{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  opacity: 0.9;
+}
+
+
 
 .map-link::after{
   content: '';
@@ -1101,7 +1082,15 @@ color: #6B6B6B;
   padding: 16px 88px;
   cursor: pointer;
   flex: 0 0 auto; /*кнопка не розтягується*/
+ transition:  box-shadow .3s ease,  opacity .3s ease;
 }
+
+.contact-form__submit:hover{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  opacity: 0.9;
+}
+
+
 
 .contact-form__submit:disabled {
   opacity: .6; cursor: not-allowed; /*Вимкнення кнопки поки чекбокс не відмічено*/
@@ -1136,8 +1125,15 @@ color: #6B6B6B;
   background-color: #FEF0E8;
   gap: 20px;
   cursor: pointer;
-
+  transition: box-shadow .3s ease, transform .3s ease;  
 }
+
+
+.cooperation__button:hover{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transform: scale(1.02);
+}
+
 
 .cooperation__button--active {
   background-color: #EC6714;
@@ -1212,7 +1208,6 @@ color: #6B6B6B;
   align-items: center;
   gap: 15px;
   margin-bottom: 128px;.
-
 }
 
 .news__title{
@@ -1224,7 +1219,7 @@ color: #6B6B6B;
   box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid rgba(13, 79, 35, 0.13);
-    position: relative;
+  position: relative;
   z-index: 1;
 }
 
@@ -1262,7 +1257,10 @@ color: #6B6B6B;
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
+  transition: transform .2s ease;  
 }
+
+
 
 .news__readmore::after {
   content: '';
@@ -1270,6 +1268,11 @@ color: #6B6B6B;
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
+}
+
+
+.news__readmore:hover{
+ transform: scale(1.02);
 }
 
 
@@ -1348,7 +1351,6 @@ color: #6B6B6B;
   justify-content: space-between;
   align-items: flex-start;
   padding: 62px 110px 59px;
- 
 }
 
 .footer__branding {
@@ -1377,12 +1379,11 @@ color: #6B6B6B;
 
 .contact-form__text--footer{
   display: flex;
-gap: 8px;
+  gap: 8px;
 
-font-weight: 400;
-font-size: 14px;
-color: #6B6B6B;
-
+  font-weight: 400;
+  font-size: 14px;
+  color: #6B6B6B;
 }
 
 .footer__contacts {
@@ -1515,43 +1516,38 @@ color: #6B6B6B;
 }
 
 
-/* =========================================================
-   SVG BACKGROUND
-========================================================= */
-
+/* ============================
+      SVG BACKGROUND
+=============================== */
 
 /* pattern 1_bg concept*/
 .main > .container {
-     position: relative;
-    /* isolation: isolate; */
-    z-index: 1;
+  position: relative;
+  /* isolation: isolate; */
+  z-index: 1;
 }
 
 .concept {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .concept::before {
-    content: "";
+  content: "";
+  position: absolute;
+  /* top: calc(100% + 200px); */
+  top: 0;
+  left: -40px;
+  width: 1600px;
+  height: 800vh;
 
-    position: absolute;
-    /* top: calc(100% + 200px); */
-    top: 0;
-   left: -40px;
+  background-image: url("./img/bg/pattern1_1.svg");
+  background-repeat: no-repeat;
+  background-position: -70px -6px;
+  background-size: 100% ;
 
-    width: 1600px;
-     height: 800vh;
-
-
-
-    background-image: url("./img/bg/pattern1_1.svg");
-    background-repeat: no-repeat;
-    background-position: -70px -6px;
-    background-size: 100% ;
-
-    z-index: -1;
-    pointer-events: none;
+  z-index: -1;
+  pointer-events: none;
 }
 
 
@@ -1559,129 +1555,90 @@ color: #6B6B6B;
 /* pattern 1_bg concept*/
 
 .socio-economic {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .socio-economic::after {
-    content: "";
+  content: "";
+  position: absolute;
+  /* top: calc(100% + 200px); */
+  top: 0;
+  left: -40px;
+  width: 1600px;
+  height: 600vh;
 
-    position: absolute;
-    /* top: calc(100% + 200px); */
-    top: 0;
-    left: -40px;
+  background-image: url("./img/bg/pattern2.svg");
+  background-repeat: no-repeat;
+  background-position: -100px 390px;
+  background-size: auto;
 
-    width: 1600px;
-     height: 600vh;
-
-    background-image: url("./img/bg/pattern2.svg");
-    background-repeat: no-repeat;
-    background-position: -100px 390px;
-    background-size: auto;
-
-    z-index: -1;
-    pointer-events: none;
-    
+  z-index: -1;
+  pointer-events: none;
 } 
-
-
-
 
 
 /* pattern 1_bg concept*/
 
 .cooperation__section {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
-
-
 
 .cooperation__section::before {
- content: "";
-
-    position: absolute;
-    top: 0;
-   left: -40px;
-
-    width: 1600px;
-     height: 600vh;
-
-    background-image: url("./img/bg/pattern2.svg"), url("./img/bg/pattern3.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: -100px 260px, -25px 270px;
-    background-size: auto auto;
-
-    z-index: -1;
-    pointer-events: none;
-
-}
-
-
-
-
-.cooperation__section::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
+  content: "";
+  position: absolute;
+  top: 0;
   left: -40px;
 
-    width: 1600px;
-     height: 600vh;
+  width: 1600px;
+  height: 600vh;
 
-    background-image: url("./img/bg/pattern4.svg");
-    background-repeat: no-repeat;
-    background-position: -20px 775px;
-    background-size: auto;
+  background-image: url("./img/bg/pattern2.svg"), url("./img/bg/pattern3.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: -100px 260px, -25px 270px;
+  background-size: auto auto;
 
-    z-index: -1;
-    pointer-events: none;
+  z-index: -1;
+  pointer-events: none;
 }
- 
 
+.cooperation__section::after {
+  content: "";
 
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 1600px;
+  height: 600vh;
+
+  background-image: url("./img/bg/pattern4.svg");
+  background-repeat: no-repeat;
+  background-position: -20px 775px;
+  background-size: auto;
+
+  z-index: -1;
+  pointer-events: none;
+}
 
 .contact__section {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
-
 
 .contact__section::before {
- content: "";
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 1600px;
+  height: 600vh;
 
-    position: absolute;
-    top: 0;
-    left: -40px;
+  background-image: url("./img/bg/pattern2.svg");
+  background-repeat: no-repeat;
+  background-position: -100px 210px;
+  background-size: auto ;
 
-    width: 1600px;
-     height: 600vh;
-
-    background-image: url("./img/bg/pattern2.svg");
-    background-repeat: no-repeat;
-    background-position: -100px 210px;
-    background-size: auto ;
-
-    z-index: -1;
-    pointer-events: none;
-     /* overflow: hidden; */
-
+  z-index: -1;
+  pointer-events: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

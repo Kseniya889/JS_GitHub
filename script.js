@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 /*Вимкнення кнопки поки чекбокс не відмічено*/
  document.addEventListener('DOMContentLoaded', () => {
   // --- advantages переключалка ---
@@ -133,8 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-
 
 // кнопка з телефоном, яка відкриває модальне вікно
 document.addEventListener("DOMContentLoaded", () => {
