@@ -1,0 +1,17 @@
+
+SASS SCSS компиляция в VS Code. Плагин Live Sass Compiler
+    https://www.youtube.com/watch?v=gooOJGDfmt4
+
+////
+"liveSassCompile.settings.formats": [
+  {
+    "format": "expanded",
+    "extensionName": ".css",
+    "savePath": "~/../css/"
+  }
+]
+////
+
+Сброс CSS стилей. Reset CSS
+https://webcademy.ru/blog/739/
+

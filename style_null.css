@@ -1,0 +1,80 @@
+/* 
+git checkout --orphan new-project                              створює нову гілку без історії.
+git rm -rf .                                                   видаляє всі файли з індексу. 
+git checkout HEAD style_null.css                               повертає конкретний файл із попередньої гілки.
+git add style_null.css
+git commit -m "Start new project with style_null.css only"     робиш перший комміт тільки з цим файлом.
+git push origin new-project                                    відправляєш нову гілку на сервер.
+
+ */
+
+/* 
+ git branch -m new-name                                        Якщо ти вже на потрібній гілці, просто введи для зміни імені гілки
+ git branch -m old-name new-name                               Якщо хочеш перейменувати іншу гілку:
+
+ git push origin :old-name                                     Якщо гілка вже запушена на сервер, потрібно видалити стару і запушити нову:
+git push origin new-name
+git push origin -u new-name */
+
+
+
+
+
+
+/* @font-face {
+  font-family: 'Nunito Sans';
+  src: url('fonts/Nunito_Sans/NunitoSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400; 
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('fonts/Inter_Tight/InterTight-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 600; /*діапазон ваг*/
+  /* font-style: normal; */
+
+
+
+
+/* ! Обнулення */
+* {padding: 0; margin: 0; border: 0}
+*, *:before, *:after {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box}
+:focus, :active {outline: none}
+a:focus, a:active {outline: none}
+nav, footer, header, aside {display: block}
+html, body {height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 16px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%}
+input, button, textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+img {vertical-align: top;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit;font-weight: inherit;}
+
+
+/* !-------------------- */
+
+
+/* .container{
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+} */
+
+
+.container{
+  width:min(100%,1600px);
+  margin-inline:auto;
+  padding-inline:40px;
+}
