@@ -107,7 +107,25 @@ a:hover {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 1140px;
+  max-width: 1140px;
+}
+.container--sm {
+  max-width: 840px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.visually-hidden {
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 header {
@@ -115,10 +133,96 @@ header {
   flex-direction: column;
   justify-content: space-between;
   min-height: 840px;
+  padding: 30px 0 74px;
   background: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), url(./../img/header/header-bg.jpg);
 }
 
 .header__top-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #D4C17F;
+  padding-bottom: 121px;
+  position: relative;
+}
+
+.header__title-icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.header__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.nav {
+  font-size: 14px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+.info {
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+}
+.info--map, .info--tel {
+  padding-left: 35px;
+}
+.info--map::before, .info--tel::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+}
+.info--map::before {
+  background-image: url("./../../img/header/map.svg");
+}
+.info--tel::before {
+  background-image: url("./../../img/header/phone.svg");
+}
+
+.benefits {
+  padding: 120px 0;
+}
+
+.benefits__row {
+  display: flex;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+}
+
+.benefits__item {
+  text-align: center;
+}
+
+.benefits__item-img {
+  margin-bottom: 53px;
+}
+
+.benefits__item-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.35;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@
         </a>
         <div class="header__nav">
           <nav class="nav">
-            <ul>
+            <ul class="nav__list">
               <li><a href="#!">О комплексе</a></li>
               <li><a href="#!">Район</a></li>
               <li><a href="#!">Каталог квартир</a></li>
@@ -31,22 +31,65 @@
     </div>
   </div>
 
-  <div class="header__title">
-    <div class="container">
-    TITLE
-    </div>
+  
+  <div class="container">
+    <h1 class="header__title">Жилой комплекс <br>
+      в историческом центре
+      <a href="#benefits">
+        <img class="header__title-icon" 
+        src="./img/header/mouse.svg" 
+        alt="Scroll next">
+      </a>
+    </h1>
   </div>
 
   <div class="header__footer">
-    <div class="container">
-    ADDRESS
+    <div class="text-right">
+      <a href="#section-map" class="info info--map">Наб. реки Фонтанки 10-15</a>
     </div>
+    <a href="tel:+88121234567" class="info info--tel">8 (812) 123-45-67</a>
   </div>
 
 
 </div>
 
 </header>
+
+
+<main>
+  <section class="benefits">
+    <h2 class="visually-hidden">Преимущества ЖК</h2>  <!-- цей заголовок не буде видно на сторінці він більше для семантики, бо зазвичай по правильному для кожної секції повинен бути заголовок -->
+    
+    <div class="container container--sm">
+      <div class="benefits__row">
+        
+        <div class="benefits__item">
+          <img src="./img/benefits/bench.svg" alt="benefits_bench" class="benefits__item-img">
+          <p class="benefits__item-text">Рядом исторические парки&nbsp;и&nbsp;скверы</p>
+        </div>
+        
+        <div class="benefits__item">
+          <img src="./img/benefits/building.svg" alt="benefits_building" class="benefits__item-img">
+          <p class="benefits__item-text">Полностью обустроенный</p>
+        </div>
+        
+        <div class="benefits__item">
+          <img src="./img/benefits/fountain.svg" alt="benefits_fountain" class="benefits__item-img">
+          <p class="benefits__item-text">10 фонтанов на территории</p>
+        </div>
+        
+        <div class="benefits__item">
+          <img src="./img/benefits/bicycle.svg" alt="benefits_bicycle" class="benefits__item-img">
+          <p class="benefits__item-text">6 км велодорожек</p>
+        </div>
+
+      </div>
+    </div>
+ 
+ 
+ 
+  </section>
+</main>
 
 
 </body>
