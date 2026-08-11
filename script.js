@@ -1,4 +1,4 @@
-// кнопки для advantages__section
+// ! кнопки для advantages__section
   document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".advantages__button");
     const details = document.querySelectorAll(".advantages__details");
@@ -24,7 +24,7 @@
     });
   });
 
-// кнопки для cooperation__section
+// ! кнопки для cooperation__section
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.cooperation__section').forEach(section => {
     const buttons = section.querySelectorAll('.js-toggle');
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// СЛАЙДЕР
+// ! СЛАЙДЕР
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
@@ -172,4 +172,42 @@ document.addEventListener("DOMContentLoaded", () => {
     let nextIndex = (currentIndex + 1) % slides.length;
     showSlide(nextIndex);
   }, 5000);
+});
+
+
+
+
+// ! слайдер мов з крапками (dots) 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelectors = document.querySelectorAll(".lang-selector");
+
+  langSelectors.forEach(selector => {
+    const dropdown = selector.querySelector(".lang-selector__dropdown");
+    const langText = selector.querySelector(".lang-selector__text");
+
+    // відкривати/закривати список мов
+    selector.addEventListener("click", () => {
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    });
+
+    // вибір мови
+    dropdown.addEventListener("click", (e) => {
+      if (e.target.tagName === "LI") {
+        const selectedLang = e.target.dataset.lang;
+        langText.textContent = e.target.textContent; // змінюємо напис
+        dropdown.style.display = "none";
+
+        console.log("Вибрана мова:", selectedLang);
+        // тут можна викликати функцію для зміни контенту сайту
+      }
+    });
+
+    // закриття меню при кліку поза селектором
+    document.addEventListener("click", (e) => {
+      if (!selector.contains(e.target)) {
+        dropdown.style.display = "none";
+      }
+    });
+  });
 });
