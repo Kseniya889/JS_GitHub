@@ -24,22 +24,29 @@
     });
   });
 
+
+
 // ! кнопки для cooperation__section
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  const checkbox = document.getElementById("checkbox");
-  const submit = document.querySelector(".contact-form__submit");
+  // знайти всі пари чекбокс + кнопка всередині форми
+  const forms = document.querySelectorAll(".contact-form__extras");
 
-  // початково кнопка вимкнена
-  submit.disabled = !checkbox.checked;
+  forms.forEach(form => {
+    const checkbox = form.querySelector(".contact-form--main__input--checkbox");
+    const submit = form.querySelector(".contact-form__submit");
 
-  // при зміні стану чекбокса
-  checkbox.addEventListener("change", () => {
-    submit.disabled = !checkbox.checked;
+    if (checkbox && submit) {
+      // початково кнопка вимкнена
+      submit.disabled = !checkbox.checked;
+
+      // при зміні стану чекбокса
+      checkbox.addEventListener("change", () => {
+        submit.disabled = !checkbox.checked;
+      });
+    }
   });
 });
-
 
 
 
