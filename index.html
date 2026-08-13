@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauritius</title>
+
+
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="header">
+  <div class="header-top">
+    <a href="/" class="header-logo">
+      <img src="./img/svg/header/logo_header.svg" alt="Move2Mauritius">
+    </a>
+
+    <div class="header-actions">
+
+      <div class="header__search-btn">
+
+        <button class="search-btn">
+          <img src="./img/svg/header/search.svg" alt="search">
+        </button>
+
+        <div class="search-modal" hidden>
+          <form action="/search" method="get">
+            <input type="search" name="q" placeholder="Пошук..." autocomplete="off">
+            <!-- <button type="submit">Знайти</button> -->
+          </form>
+        </div>
+
+      </div>
+
+
+
+      <div class="lang-switch">
+        <button  class="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <img src="./img/svg/header/global.svg" alt="language logo">
+          <span class="sr-only">Вибір мови</span> <!-- Це невидимий для очей текст, який бачать лише екранні читалки (програми для людей з вадами зору) -->
+        </button>
+
+        <ul class="lang-menu" hidden>
+          <li><button data-lang="uk">UA</button></li>
+          <li><button data-lang="en">EN</button></li>
+        </ul>
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+  <div class="header-bottom"></div>
+</header>
+
+
+
+<main class="main"></main>
+<footer class="footer"></footer>
+  
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
