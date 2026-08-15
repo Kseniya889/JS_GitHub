@@ -1,4 +1,4 @@
-/* Шрифти  */
+/* ? Шрифти  */
 @font-face {
   font-family: 'Poppins', sans-serif; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
   src: url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
@@ -91,18 +91,40 @@
 }
 
 
-/* Глобальні змінні */
-:root {
+/* ? Глобальні змінні */
+
+
+:root {      /* min-width: 360px */
   --primary-color: #171E2E;
   --secondary-color: #fff;
   --third-color: #F8F8F8;
   --forth-color: #CEDDFF;
   --font-main: 'Poppins', sans-serif;
-  --font-size-base: 16px;
   --spacing: 1rem;
+  
+  --font-size-base: 14px;  /* мобайл */
+  --font-size-h1: 24px;  /* мобайл */
+  --font-size-h2: 20px;  /* мобайл */
+
 }
 
+/* планшет  */
+@media (min-width: 768px) {
+  :root {
+    --font-size-base: 15px; 
+    --font-size-h1: 28x; 
+    --font-size-h2: 22px; 
+  }
+}
 
+/* десктоп  */
+@media (min-width: 1200px) {
+  :root {
+    --font-size-base: 16px;
+    --font-size-h1: 32x; 
+    --font-size-h2: 24px; 
+  }
+}
 
 
 html{
@@ -118,12 +140,35 @@ font-family: var(--font-main);
 line-height: 1.5;
 background-color:var(--third-color);
 }
+
+
+/* мобайл */
+
 /* 
+
 .container{
-max-width: 1522px;
-padding: 0 40px;;
+  max-width: 1522px;
+  padding: 0 2.5rem;
 } */
 
+.container{
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* планшет  */
+@media (min-width: 768px) {
+  max-width: 720px;
+  padding: 0 1.5rem;
+}
+
+
+/* десктоп  */
+@media (min-width: 1200px) {
+  max-width: 1140px;
+  padding: 0 2.5rem;
+}
 
 .sr-only {
   position: absolute;
@@ -139,132 +184,241 @@ padding: 0 40px;;
 
 
 
-/* =====HEADER===== */
-
-.header {
-
-}
+/* ? ======HEADER====== */
 
 
-/* ----header-top---- */
+/* ? ----header-top---- */
 
-.header-top {
+/* мобайл  */
+.header__top {
   background: var(--primary-color);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 0.9rem 2.5rem; /*14px 40px*/
+  /* justify-content: center; */
+  padding: 0.5rem 1rem; 
 }
 
-.header-logo {
+.header__logo {
   grid-column: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.5;
   color: var(--forth-color);
 }
 
-.header-actions{
+.logo-main{
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.header__actions{
   grid-column: 3;
 
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 2rem; /*32px*/
+  gap: 0.5rem; /*32px*/
 }
 
 
-/* ----lang-switch--- */
+/* планшет  */
+@media (min-width: 768px) {
+.header__top {
+  /* padding: 0.9rem 2.5rem; 14px 40px */
+}
+
+.header__logo {
+
+}
+
+.logo-main{
+  /* font-size: 1.5rem;
+  line-height: 1.5; */
+}
+
+.header__actions{
+  /* grid-column: 3;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem; 32px */
+}}
+
+
+/* десктоп  */
+@media (min-width: 1200px) {}
+
+
+.header__top {
+  /* padding: 0.9rem 2.5rem; 14px 40px */
+}
+
+.header__logo {
+
+}
+
+.logo-main{
+  /* font-size: 1.5rem;
+  line-height: 1.5; */
+}
+
+.header__actions{
+  /* grid-column: 3;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem; 32px */
+}
+
+
+/* ? ----lang-switch--- */
 
 .lang-switch {
   position: relative;
 }
 
-.lang-btn {
+.lang-switch__btn {
   width: 1.5rem;
   height: 1.5rem;
-  /* background: none; */
-  /* border: none; */
-  /* cursor: pointer; */
 } 
 
-.lang-menu {
+.lang-switch__menu {
   position: absolute;
   top: 130%;
   right: -70%;
   background: var(--secondary-color);
   border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem; /*8px*/
   list-style: none;
   padding: 0.5rem;
   margin: 0;
-
 }
 
-/* .lang-menu li {
-  margin: 0;
-} */
+.lang-switch__menu button:hover {
+  background-color: var(--forth-color);
+  border-radius: 3px;
+}
 
-.lang-menu button {
-  /* background: none; */
-  /* border: none; */
+.lang-switch__menu button {
   padding: 0.25rem 0.5rem;
-  /* width: 100%; */
-  /* text-align: right; */
 }
 
 
-/* ---header__search-btn--- */
+/*-------header__search-btn------- */
 
-.header__search-btn {
+.search {
   position: relative;
 }
- 
-.search-btn {
-}
 
-.search-modal {
- position: absolute;
+.search__modal {
+  position: absolute;
   top: 130%;
   right: 0%;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 0.5rem; /*8px*/
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   /* list-style: none; */
   padding: 0.5rem;
   z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateY('-10px');
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.search-modal--active {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateY('0');
 }
 
 /* прибрати синій стандартний хрестик в інпут та поставити свій чорний */
 
-
-input[type="search"]::-webkit-search-cancel-button {
+input[type='search']::-webkit-search-cancel-button {
   -webkit-appearance: none;   /* прибирає стандартний синій */
   height: 1rem;
   width: 1rem;
   background: url('./img/svg/header/close.svg') no-repeat center center;
   background-size: contain;
-  cursor: pointer;            /* щоб виглядало як кнопка */
 }
 
-input[type="search"] {
+input[type='search'] {
   bottom: none; /* прибирає рамку */
   outline: none;   /* прибирає чорний контур при фокусі */
 
   /* border: 1px solid var(--forth-color); свій колір рамки */
   border-radius: 0.2rem;                   /* округлення */
-  padding: 0.2rem 0.5rem;                 /* внутрішні відступи */
+  padding: 0.2rem 1rem;                 /* внутрішні відступи */
+  background: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M17.5 17.5L22 22' stroke='grey' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/><path d='M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z' stroke='grey' stroke-width='1.5' stroke-linejoin='round'/></svg>") no-repeat 0.75rem center;
+  background-size: 1rem;
+  padding-left: 2.5rem;
+/* filter: invert(1); робить колір свг чорне → біле, біле → чорне */
+}
 
-background: url(./img/svg/header/search.svg) no-repeat 0.75rem center;
-background-size: 1rem;
-padding-left: 2rem;
 
-background-color: red;
+/* ? ----header-bottom---- */
 
+/* mobile */
+
+.nav{
+  display: none; /* приховане меню */
+
+  /* overflow-x: auto; */
+}
+
+.nav.active {
+  display: block;
+}
+
+.burger{
+  font-size: 2rem;
+  background: none;
+  border: none;
+}
+
+
+@media (max-width: 768px) {
+  
+.nav__list{
+  display: flex;
+  gap: 2.25rem;
+}
+
+} 
+
+
+
+.nav__list{
+  display: flex;
+  gap: 2.25rem;
+}
+
+
+
+/* desktop */
+
+@media (min-width: 768px) {
+  .burger {
+    display: none; /* бургер ховаємо */
+  }
+
+  .nav {
+    display: block; /* меню показуємо */
+  }
+}
+
+
+.header__bottom{
+  background: var(--forth-color);
+  overflow: hidden;
 }
 
 
@@ -273,5 +427,53 @@ background-color: red;
 
 
 
+.nav__item{
+  display: flex;
+  align-items: center;
+  min-height: 4.5rem;
+}
 
+.nav__item--active {
+  border-radius:  0 0 1rem 1rem;
+  margin-top: -1rem;
+} 
+
+.nav__item--active .nav__link{
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding-top: 2rem;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  padding: 0.8rem 1rem; 
+  border-radius: 0 0 1.2rem 1.2rem;
+  color: var(--primary-color);
+  white-space: nowrap;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav__link::after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url('./img/svg/header/down_2.svg') center/contain no-repeat;
+}
+
+.nav__item--active .nav__link::after {
+  /* content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem; */
+  /* background: url('./img/svg/header/down_2.svg') center/contain no-repeat; */
+  filter: invert(1); /* робить колір свг чорне → біле, біле → чорне */
+}
+ 
 

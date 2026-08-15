@@ -11,59 +11,90 @@
 </head>
 <body>
 <header class="header">
-  <div class="header-top">
-    <a href="/" class="header-logo">
+  <div class="header__top">
+    <a href="/" class="header__logo logo-main">
       <img src="./img/svg/header/logo_header.svg" alt="Move2Mauritius">
     </a>
 
-    <div class="header-actions">
-
-      <div class="header__search-btn">
-
-        <button class="search-btn">
+    <div class="header__actions">
+      <div class="search">
+        <button class="search__btn">
           <img src="./img/svg/header/search.svg" alt="search">
         </button>
 
-        <div class="search-modal" hidden>
+        <div class="search__modal">
           <form action="/search" method="get">
+            
             <input type="search" name="q" placeholder="Пошук..." autocomplete="off">
             <!-- <button type="submit">Знайти</button> -->
           </form>
         </div>
-
       </div>
 
-
-
       <div class="lang-switch">
-        <button  class="lang-btn" aria-haspopup="true" aria-expanded="false">
+        <button  class="lang-switch__btn" aria-haspopup="true" aria-expanded="false">
           <img src="./img/svg/header/global.svg" alt="language logo">
           <span class="sr-only">Вибір мови</span> <!-- Це невидимий для очей текст, який бачать лише екранні читалки (програми для людей з вадами зору) -->
         </button>
 
-        <ul class="lang-menu" hidden>
+        <ul class="lang-switch__menu" hidden>
           <li><button data-lang="uk">UA</button></li>
           <li><button data-lang="en">EN</button></li>
         </ul>
       </div>
-
-
-
     </div>
-
-
-
   </div>
-  <div class="header-bottom"></div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <button class="burger" aria-label="Menu">
+    ☰
+      </button>
+
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--active">
+            <a href="#" class="nav__link">Mauritius</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">For Life</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Business and Investments</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Real Estate</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Rules and Legislation</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Blog</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">About us</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
 
-
-
+<!-- 
 <main class="main"></main>
 <footer class="footer"></footer>
-  
-
-
+   -->
 
 <script src="./script.js"></script>
 </body>
