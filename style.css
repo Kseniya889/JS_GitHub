@@ -94,7 +94,7 @@
 /* ? Глобальні змінні */
 
 
-:root {      /* min-width: 360px */
+:root {      /* min-width: 1200px */
   --primary-color: #171E2E;
   --secondary-color: #fff;
   --third-color: #F8F8F8;
@@ -102,10 +102,9 @@
   --font-main: 'Poppins', sans-serif;
   --spacing: 1rem;
   
-  --font-size-base: 14px;  /* мобайл */
-  --font-size-h1: 24px;  /* мобайл */
-  --font-size-h2: 20px;  /* мобайл */
-
+  --font-size-base: 16px;
+    --font-size-h1: 32x; 
+    --font-size-h2: 24px; 
 }
 
 /* планшет  */
@@ -117,12 +116,13 @@
   }
 }
 
-/* десктоп  */
-@media (min-width: 1200px) {
+/* мобайл  */ /* min-width: 360px */
+@media (min-width: 360px) {
   :root {
-    --font-size-base: 16px;
-    --font-size-h1: 32x; 
-    --font-size-h2: 24px; 
+    --font-size-base: 14px;  /* мобайл */
+  --font-size-h1: 24px;  /* мобайл */
+  --font-size-h2: 20px;  /* мобайл */
+
   }
 }
 
@@ -151,10 +151,11 @@ background-color:var(--third-color);
   padding: 0 2.5rem;
 } */
 
-.container{
-  width: 100%;
-  padding: 0 1rem;
-  margin: 0 auto;
+.container{ 
+  /* десктоп */
+ max-width: 1140px;
+  padding: 0 2.5rem;
+
 }
 
 /* планшет  */
@@ -164,10 +165,12 @@ background-color:var(--third-color);
 }
 
 
-/* десктоп  */
-@media (min-width: 1200px) {
-  max-width: 1140px;
-  padding: 0 2.5rem;
+/* мобайл  */
+@media (min-width: 360px) {
+  
+   width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 
 .sr-only {
@@ -195,8 +198,7 @@ background-color:var(--third-color);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  /* justify-content: center; */
-  padding: 0.5rem 1rem; 
+    padding: 0.9rem 2.5rem; /* 14px 40px */
 }
 
 .header__logo {
@@ -212,6 +214,7 @@ background-color:var(--third-color);
 .logo-main{
   font-size: 1.5rem;
   line-height: 1.5;
+
 }
 
 .header__actions{
@@ -220,60 +223,19 @@ background-color:var(--third-color);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem; /*32px*/
+    gap: 2rem; 32px */
 }
 
 
 /* планшет  */
-@media (min-width: 768px) {
-.header__top {
-  /* padding: 0.9rem 2.5rem; 14px 40px */
-}
+/* @media (min-width: 768px) {
 
-.header__logo {
-
-}
-
-.logo-main{
-  /* font-size: 1.5rem;
-  line-height: 1.5; */
-}
-
-.header__actions{
-  /* grid-column: 3;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem; 32px */
-}}
+} */
 
 
 /* десктоп  */
 @media (min-width: 1200px) {}
 
-
-.header__top {
-  /* padding: 0.9rem 2.5rem; 14px 40px */
-}
-
-.header__logo {
-
-}
-
-.logo-main{
-  /* font-size: 1.5rem;
-  line-height: 1.5; */
-}
-
-.header__actions{
-  /* grid-column: 3;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem; 32px */
-}
 
 
 /* ? ----lang-switch--- */
@@ -369,22 +331,79 @@ input[type='search'] {
 /* mobile */
 
 .nav{
-  display: none; /* приховане меню */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 1521px;
+  width: 100%;
+  margin: 0 auto;
+
+  /* display: none; приховане меню */
 
   /* overflow-x: auto; */
 }
+
+
+.nav__list{
+  display: flex;
+  gap: 2.25rem;
+}
+
+/* бургер меню */
+.burger{
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+
+/* медіазапит для мобайл */
+
+@media (max-width: 767px) {
+  .burger{
+    display: flex;
+  }
+
+.nav__list{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh; /* висота екрану */
+  background: #fff;
+  flex-direction: column;
+}
+
+}
+
+
+
+
+
+
+
+
+
 
 .nav.active {
   display: block;
 }
 
-.burger{
+/* .burger{
   font-size: 2rem;
   background: none;
   border: none;
-}
+} */
 
-
+/* 
 @media (max-width: 768px) {
   
 .nav__list{
@@ -392,28 +411,23 @@ input[type='search'] {
   gap: 2.25rem;
 }
 
-} 
+}  */
 
 
-
-.nav__list{
-  display: flex;
-  gap: 2.25rem;
-}
 
 
 
 /* desktop */
-
+/* 
 @media (min-width: 768px) {
   .burger {
-    display: none; /* бургер ховаємо */
+    display: none;  бургер ховаємо
   }
 
   .nav {
-    display: block; /* меню показуємо */
+    display: block; меню показуємо 
   }
-}
+} */
 
 
 .header__bottom{
