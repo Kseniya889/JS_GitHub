@@ -1,90 +1,90 @@
 /* ? Шрифти  */
 @font-face {
-  font-family: 'Poppins', sans-serif; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
+  font-family: 'Poppins'; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
   src: url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
   font-weight: 700; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins', sans-serif; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
+  font-family: 'Poppins'; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
   src: url('./fonts/Poppins/Poppins-Medium.ttf') format('truetype');
   font-weight: 500; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins', sans-serif; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
+  font-family: 'Poppins'; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
   src: url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
   font-weight: 400; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins', sans-serif; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
+  font-family: 'Poppins'; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
   src: url('./fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins', sans-serif; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
+  font-family: 'Poppins'; /* Gilroy, Zt Shago, Bounded, Gilroy Semibold Italic, Rodeluxet) - 500, 600, 400, 700*/
   src: url('./fonts/Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
   font-weight: 600; 
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Jost', sans-serif; /* Future Shock */
+  font-family: 'Jost'; /* Future Shock */
   src: url('./fonts/Jost/Jost-VariableFont_wght.ttf') format('truetype');
   font-weight: 400; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
   font-weight: 400; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Inter Tight';
   src: url('./fonts/Inter_Tight/InterTight-VariableFont_wght.ttf') format('truetype');
   font-weight: 400; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope';
   src: url('./fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
   font-weight: 400; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope';
   src: url('./fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
   font-weight: 500; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito';
   src: url('./fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf') format('truetype');
   font-weight: 600; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   src: url('./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
   font-weight: 600; 
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Playfair Display', sans-serif; /* Athene Voyage, Black Mango */
+  font-family: 'Playfair Display'; /* Athene Voyage, Black Mango */
   src: url('./fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
   font-weight: 400; 
   font-style: normal;
@@ -134,7 +134,7 @@ html{
                             - smooth → плавна анімація при прокрутці (наприклад, коли переходиш по якорю #section). */
                         }
 
-.body{
+body{
 color: var(--primary-color);
 font-family: var(--font-main);
 line-height: 1.5;
@@ -199,6 +199,8 @@ background-color:var(--third-color);
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
     padding: 0.9rem 2.5rem; /* 14px 40px */
+
+    
 }
 
 .header__logo {
@@ -328,32 +330,95 @@ input[type='search'] {
 
 /* ? ----header-bottom---- */
 
-/* mobile */
+.header__bottom{
+  background: var(--forth-color);
+  overflow: hidden;
+}
 
 .nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 1521px;
+  /* min-width: 1521px; */
   width: 100%;
   margin: 0 auto;
 
   /* display: none; приховане меню */
 
-  /* overflow-x: auto; */
+/* overflow-x: auto; */
 }
-
 
 .nav__list{
   display: flex;
-  gap: 2.25rem;
+  /* gap: 2.25rem; */
+  gap: clamp(0.5rem, 2vw, 2.25rem);
 }
 
-/* бургер меню */
+.nav__item{
+  display: flex;
+  align-items: center;
+  min-height: 4.5rem;
+}
+
+.nav__item--active {
+  border-radius:  0 0 1rem 1rem;
+  margin-top: -1rem;
+} 
+
+.nav__item--active .nav__link{
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  /* padding-top: clamp(0.6rem, 3vw, 2rem); */
+
+  /* transform: translateY(10px); */
+
+}
+
+.nav__link {
+  font-size: clamp(12px, 1vw, 16px);
+  padding: clamp(0.4rem, 1vw, 1rem);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  /* padding: 0.8rem 1rem;  */
+  border-radius: 0 0 1.2rem 1.2rem;
+  color: var(--primary-color);
+  white-space: nowrap;
+  transition: color 0.15s;
+  /* transition: none; */
+}
+
+.nav__link::after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url('./img/svg/header/down_2.svg') center/contain no-repeat;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav__item--active .nav__link::after {
+  filter: invert(1); /* робить колір свг чорне → біле, біле → чорне */
+  transform: rotate(180deg);
+}
+ 
+
+
+
+.nav.active {
+  display: block;
+}
+
+/* ! бургер меню */
 .burger{
   display: none;
   flex-direction: column;
   padding: 5px;
+  margin-left: auto;
 }
 
 .burger span {
@@ -367,7 +432,7 @@ input[type='search'] {
 
 /* медіазапит для мобайл */
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .burger{
     display: flex;
   }
@@ -377,11 +442,69 @@ input[type='search'] {
   top: 0;
   right: -100%;
   width: 70%;
-  height: 100vh; /* висота екрану */
+  height: 100vh; висота екрану
   background: #fff;
   flex-direction: column;
+  padding: 80px 20px 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
 }
 
+.nav__list.active {
+  right: 0;
+  
+}
+
+
+/* Анімація бургера при активації */
+
+.burger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.nav__item{
+  min-height: auto;
+}
+
+
+.nav__item{
+  display: inline-block;
+  align-items: center;
+  min-height: 0.5rem;
+}
+
+.nav__item--active {
+  /* border-radius: 0; */
+  margin-top: 0px;
+} 
+
+
+.nav__link {
+  border-radius: 0rem;
+  
+}
+
+.nav__item--active .nav__link{
+  padding-top: 0;
+  padding-top: 10px;
+  /* padding: 0.5rem 1rem; */
+}
+
+
+
+
+.header__bottom{
+  background: none;
+}
 }
 
 
@@ -392,10 +515,6 @@ input[type='search'] {
 
 
 
-
-.nav.active {
-  display: block;
-}
 
 /* .burger{
   font-size: 2rem;
@@ -430,64 +549,7 @@ input[type='search'] {
 } */
 
 
-.header__bottom{
-  background: var(--forth-color);
-  overflow: hidden;
-}
 
 
 
-
-
-
-
-.nav__item{
-  display: flex;
-  align-items: center;
-  min-height: 4.5rem;
-}
-
-.nav__item--active {
-  border-radius:  0 0 1rem 1rem;
-  margin-top: -1rem;
-} 
-
-.nav__item--active .nav__link{
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  padding-top: 2rem;
-}
-
-.nav__link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  position: relative;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-  padding: 0.8rem 1rem; 
-  border-radius: 0 0 1.2rem 1.2rem;
-  color: var(--primary-color);
-  white-space: nowrap;
-  transition: background 0.3s, color 0.3s;
-}
-
-.nav__link::after {
-  content: "";
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  background: url('./img/svg/header/down_2.svg') center/contain no-repeat;
-}
-
-.nav__item--active .nav__link::after {
-  /* content: "";
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem; */
-  /* background: url('./img/svg/header/down_2.svg') center/contain no-repeat; */
-  filter: invert(1); /* робить колір свг чорне → біле, біле → чорне */
-}
- 
 
