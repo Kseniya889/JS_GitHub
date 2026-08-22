@@ -1,0 +1,43 @@
+.destiny {
+  background: var(--primary-green);
+  mix-blend-mode: normal;
+  padding: calc(var(--spacing)*7.375) 0 calc(var(--spacing)*5.31); /* 118px 0 85px */
+  color: var(--primary-pink);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.destiny__content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing)*3); /* 48px */
+  align-items: flex-start;
+}
+
+.destiny__text {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing)*2); /* 32px */
+  /* 482/1268*100%=38% */
+  max-width: 38%;
+}
+
+.destiny__link {
+  box-sizing: border-box;
+  padding: calc(var(--spacing)*0.906) calc(var(--spacing)*1.9375); /* 14.5px 31px */
+  border: 2px solid var(--primary-pink);
+  border-radius: 100px;
+  
+  color: var(--primary-pink);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: calc(var(--font-size-base)*0.75); /* 18px */
+  line-height: 1.39;
+}
+
+.destiny img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

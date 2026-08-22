@@ -1,0 +1,59 @@
+.header {
+  padding: calc(var(--spacing)*1.25) 0; /* 20px 0 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px);
+
+  z-index: 9999;   
+  /* щоб хедер був на верхньому слої */
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: calc(var(--font-size-base)*1.08) ; /* 26px */
+  line-height: 1.2;
+
+  color: var(--primary-green);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing)*3); /* 48px */
+}
+
+.header__list {
+  display: flex;
+  gap: calc(var(--spacing)*1.5); /* 24px */
+}
+
+.header__list-item a {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: calc(var(--font-size-base)*0.667); /* 16px */
+  line-height: 1.4;
+  color: var(--primary-green);
+}
+
+.header__download {
+  background: var(--primary-green);
+  border-radius: 124px;
+  padding: calc(var(--spacing)*0.75) calc(var(--spacing)*2.719); /* 12px 43.5px */
+
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: calc(var(--font-size-base)*0.667); /* 16px */
+  line-height: 1.2;
+  color: var(--primary-pink);
+}

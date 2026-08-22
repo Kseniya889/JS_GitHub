@@ -1,0 +1,49 @@
+.discover {
+  background-color: var(--primary-pink);
+  padding: calc(var(--spacing)*12.25) 0 calc(var(--spacing)*10.25); /* 196px 0 164px */
+  position: relative;
+  overflow: hidden;
+  color: var(--secondary-color);
+}
+
+.discover__container {
+  display: flex;
+  justify-content: center;
+}
+
+.discover__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: calc(var(--spacing)*1.5); /* 24px */
+  z-index: 9;
+}
+
+.discover__title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: calc(var(--font-size-base)*3.33); /* 80px */
+
+
+  line-height: 1.2;
+  mix-blend-mode: normal;
+}
+
+.discover__desc {
+  font-weight: 400;
+  font-family: var(--font-size-base);
+  line-height: 1.33;
+
+/* 747/1268*100%=59% */
+  max-width: 59%;
+}
+
+.discover__desc span {
+  font-weight: 800;
+}
+
+.discover img {
+  position: absolute;
+  top: calc(var(--spacing)*1.25); /* 30px */
+}
