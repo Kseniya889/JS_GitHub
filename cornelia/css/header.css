@@ -21,7 +21,7 @@
 .header__logo {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: calc(var(--font-size-base)*1.08) ; /* 26px */
+  font-size: calc(var(--font-size-base)*1.09) ; /* 26px */
   line-height: 1.2;
 
   color: var(--primary-green);
