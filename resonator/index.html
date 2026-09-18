@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style_adaptive.css">
 </head>
 <body>
 <header class="header">
@@ -77,12 +78,16 @@
 <main class="main">
   <section class="hero">
     <div class="hero__container">
-      <div class="hero__image">
-        <img src="./images/hero_bg.jpg" alt="Resonator" class="hero_bg">
-      </div>
+      <!-- <div class="hero__image">
+        <picture>
+          <source media="(max-width: 600px)" srcset="./images/Mobile_bg.jpg">
+          <source media="(max-width: 1024px)" srcset="./images/Tablet_bg.jpg">
+          <img src="./images/hero_bg.jpg" alt="Resonator" class="hero_bg">
+        </picture>
+      </div> -->
 
       <div class="hero__text">
-        <h1 class="hero__title">New episode <br> available now</h1>
+        <h1 class="hero__title title">New episode <br> available now</h1>
         <p class="hero__label">Available on Apple Soundcast and Spotify.</p>
         <div class="hero_btns">
           <button type="button" class="hero__btn hero__btn-apple">
@@ -92,22 +97,64 @@
             <img src="./images/header_btn2.png" alt="btn-soundCloud">
           </button>
         </div>
+      </div>
+    </div>
+  </section>
+<!-- 
+  <section class="player">
 
-        <!-- <div class="hero__player">
-          <img src="" alt="" class="hero__player-img">
+        <div class="hero__player">
+          <div class="player__image">
+            <img src="./images/player_img.jpg" alt="" class="hero__player-img">
+          </div>
+
           <div class="player__details">
-            <h2 class="player__title"></h2>
-            <p class="player__meta"></p>
+            <h2 class="player__title">Timmy Mike: the nature <br>of design</h2>
+            <p class="player__meta">Episode 1 •</p>
+          </div>
 
-            .block_player
+          <div class="player__btn">Episode page</div>
 
-          </div> -->
+
+
+
+
+
+          <div class="block__player"></div>
+        </div>
+
+  </section> -->
+
+<section class="article">
+<div class="article__container">
+
+
+    <div class="article_descr">
+      <h2 class="article__title title">Best places to find design inspiration</h2>
+
+      <div class="player__episode">
+        <button class="player__button"></button>
+
+        <div class="episode__info">
+          <h4 class="article__episode-title">Episode 1</h4>
+          <p class="article__episode-meta meta-info"> Category <span class="round">•</span>  0:13</p>
         </div>
       </div>
 
 
+      <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+      <p class="article__text">Ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="article__meta">Episode 1</p>
     </div>
-  </section>
+
+    
+  </div>
+  <img src="./images/article_img.jpg" alt="" class="article__img" width="525px" height="519px" loading="lazy">
+</section>
+
+
+
+
 </main>
 
 </body>
