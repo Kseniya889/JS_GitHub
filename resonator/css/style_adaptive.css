@@ -1,0 +1,112 @@
+
+
+
+/* Базові стилі — мобайл first */
+/* @media (min-width: 367px) {
+
+
+[class*="__container"] {
+  padding-inline: calc(var(--container-padding-x));
+}
+
+
+} */
+
+
+
+/* Планшет */
+ @media (max-width: 1024px) {
+  
+
+
+
+.hero__image img{
+  /* max-width: 1024px; */
+/* max-height: none; */
+/* height: auto; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+/* Десктоп */
+/* @media (min-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+.header-actions {
+column-gap: 10px;
+}
+
+.header__menu-list {
+column-gap: 25px;
+}
+
+.header__menu{
+  order: 1;
+  flex-basis: 100%;
+  padding-top: 20px;
+}
+
+.header {
+  flex-wrap: wrap;
+}
+
+
+[class*="__container"] {
+  margin: 0 auto;
+}
+
+.hero__image img {
+  min-width: 767px;
+}
+
+
+}

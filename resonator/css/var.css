@@ -1,0 +1,26 @@
+
+:root {
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-dark-grey: #8E8B8C;
+  --color-light-grey: #CCCCCC;
+  
+  --font-family-base: "Open Sans", sans-serif;
+  --font-family-accent: "Lato", sans-serif;
+
+ --container-width: 1300px;
+  --container-padding-x: 15px;
+  /* 
+
+  --border-radius: 30px;
+  --border: 1px solid var(--color-light);
+
+
+
+  --input-height: 54px;
+
+  --container-width: 1300px;
+  --container-padding-x: 15px;
+
+  --transition-duration: 0.2s; */
+}

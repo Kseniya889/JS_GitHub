@@ -1,0 +1,35 @@
+
+/* Mobile (до 480px) */
+@media (max-width: 480px) {
+  /* стилі для телефонів */
+}
+
+/* Tablet (до 768px) */
+@media (max-width: 768px) {
+  /* стилі для планшетів */
+}
+
+/* Laptop (до 1024px) */
+@media (max-width: 1024px) {
+  /* стилі для ноутбуків */
+}
+
+/* Desktop (до 1440px) */
+@media (max-width: 1440px) {
+  /* стилі для широких моніторів */
+
+
+.hero {
+  /* min-height: 100svh;
+  width: min(100%, 1920px); /* width: 100%; max-width: 1920px; */
+  background: url(../images/hero_bg.jpg) no-repeat 87%/cover ;
+
+  margin-bottom: 277px;
+} */
+
+
+
+}
+
+
+

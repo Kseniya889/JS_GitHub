@@ -1,0 +1,375 @@
+@font-face {
+    font-family: 'Lato';
+    src: url(./fonts/Lato/Lato-Bold.woff2) format('woff2'),
+        url(./fonts/Lato/Lato-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(./fonts/Open_Sans/OpenSans-Regular.woff2) format('woff2'),
+        url(./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import url(var.css);
+@import url(media.css);
+
+
+
+
+
+
+
+/* reset? */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+body {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: var(--font-family-base);
+  color: var(--color-dark);
+}
+
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+
+[class*="__container"] {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  /* margin-inline: auto; */
+  /* margin: 0 auto; */
+  padding-inline: var(--container-padding-x);
+  margin-left: 274px;
+  /* margin-inline: auto; */
+}
+
+
+h1, h2, h3 {
+  font-family: var(--font-family-accent);
+  font-weight: 700;
+}
+
+p:not(:last-child) {
+  margin-block: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* =====HEADER===== */
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 46px;
+max-height: 115px;
+
+  /* --щоб фон був під хедером-- */
+position: fixed;
+width: 100%;
+left: 0;
+top: 0;
+z-index: 50;
+/* --------------------- */
+
+}
+
+.header__logo {
+flex-shrink: 0; /* щоб лого не сжималась та не спотворювалась при масштабуванні */
+}
+
+.header__menu-list {
+display: flex;
+align-items: center;
+column-gap: 35px;
+flex-wrap: wrap;
+}
+
+.header__menu-link {
+font-family: var(--font-family-accent);
+font-weight: 700;
+font-size: 15px;
+line-height: 1.4;
+}
+
+.header__menu-link.is-current {
+  /* border-bottom: 2px solid var(--color-dark); */
+}
+
+.header__menu-link:hover{
+  color: var(--color-dark-grey);
+  border-bottom: 2px solid var(--color-dark-grey);
+
+}
+
+.header-actions {
+display: flex;
+align-items: center;
+column-gap: 25px;
+}
+
+.btn {
+  border: none;
+background-color: transparent;
+}
+
+.search__btn {
+  position: relative;
+  padding-left: 18px;
+  /* width: 46px; */
+  /* height: 21px; */
+
+  font-family: var(--font-family-accent);
+  font-weight: 700;
+  font-size: 15px;
+  line-height:1.4;
+/* color: var(--color-dark); */
+}
+
+.search__btn::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 15px;
+  height: 21px;
+  background: url('../icons/search.svg') no-repeat center/contain;
+}
+
+/* ============== */
+
+
+/* =====HERO===== */
+.main {
+  min-height: 100vh;
+  position: relative;
+}
+
+
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  min-height: 100svh;
+  /* width: min(100%, 1920px); width: 100%; max-width: 1920px; */
+  background: url(../images/hero_bg.jpg) no-repeat center/cover ;
+
+  display: block;
+   max-inline-size: 100%;
+
+  margin-bottom: 277px;
+}
+
+.hero__container {
+
+}  
+
+.hero__text {
+  padding-top: 215px;
+  margin: 0 auto;
+  /* max-width: 582px; */
+}
+
+.hero__title {
+
+
+font-size: 68px;
+line-height: 1.03;
+}
+
+.hero__label {
+/* font-family: 'Open Sans'; */
+font-weight: 400;
+font-size: 19px;
+line-height: 1.42;
+/* color: #000000; */
+margin: 14px 0 50px;
+
+}
+
+.hero_btns {
+gap: 23px;
+}
+
+.hero__btn {
+border: 0;
+padding: 0;
+background: transparent;
+}
+
+.hero__btn-apple {
+margin-right: 23px;
+}
+
+.hero__btn-soundCloud {
+
+}
+
+/* ============== */
+
+
+
+/* =====PLAYER===== */
+.hero__player {
+  display: flex;
+  justify-content: space-between;;
+}
+/* ============== */
+
+
+
+
+
+
+
+
+/* =====ARTICLE===== */
+.article {
+display: flex;
+}
+
+.article_descr {
+max-width: 520px;
+}
+
+.article__title {
+
+}
+
+.title {
+
+}
+
+.player__episode {
+display: flex;
+align-items: center;
+column-gap: 21px;
+}
+
+.player__button {
+border: none;
+width: 70px;
+aspect-ratio: 1;
+
+border: 2px solid #CECECE;
+border-radius: 70px;
+background-color: transparent;
+
+}
+
+.episode__info {
+
+}
+
+.article__episode-title {
+
+}
+
+.article__episode-meta {
+
+}
+
+.meta-info {
+
+}
+
+.round {
+
+}
+
+.article__text {
+
+}
+
+.article__meta {
+
+}
+
+.article__img {
+
+}
+/* ============== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====HERO===== */
+/* ============== */

@@ -1,0 +1,31 @@
+
+:root {
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-light-grey: #C4C4C4;
+  --color-light-bg: #F3F3F3;
+  --font-family-base: "Montserrat", sans-serif;
+  
+
+ --container-width-xl: 1450px;
+/* 1358+46*2=1450px (1358 max-width контейнера + по 46px padding-inline*/
+
+--container-width-sm: 941px;
+/* 849+46*2=941px (849 max-width контейнера + по 46px padding-inline*/
+
+
+  --container-padding-x: 46px;
+  /* 
+
+  --border-radius: 30px;
+  --border: 1px solid var(--color-light);
+
+
+
+  --input-height: 54px;
+
+  --container-width: 1300px;
+  --container-padding-x: 15px;
+
+  --transition-duration: 0.2s; */
+} 
