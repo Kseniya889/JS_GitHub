@@ -74,14 +74,9 @@ html,
 body {
   height: 100%;
   width: 100%;
-  /* font-size: 100%; */
   line-height: 1;
-  font-size: 18px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-
-
-
 }
 input,
 button,
@@ -94,6 +89,10 @@ input::-ms-clear {
 button {
   cursor: pointer;
   background: none;
+
+  font-size: inherit; /* унаслідується від body */
+  font-weight: inherit; /*унаслідується від body */
+  font-family: inherit;
 }
 button::-moz-focus-inner {
   padding: 0;
@@ -103,6 +102,7 @@ a,
 a:visited {
   text-decoration: none;
   color: #000;
+  
 }
 a:hover {
   text-decoration: none;
@@ -125,6 +125,10 @@ ul {
 
 /* ====base==== */
 
+html {
+ font-size: 18px;
+}
+
 
 body {
   background-color: var(--color-light);
@@ -132,9 +136,8 @@ body {
   font-size: 1rem;
   font-family: var(--font-family-base);
   line-height: 1.2;
-}
 
-/* ======HEADER====== */
+}
 
 [class*="container-"] {
   padding-inline: var(--container-padding-x);
@@ -142,127 +145,126 @@ body {
 }
 
 .container-xl {
-  max-width: var(--container-width-xl);
+  max-width: var(--container-width-xl);  /* 1450px */
 }
-
-.header {
-  /* position: relative; */
-  max-height: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-
-  
-}
-
-.header__inner {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-self: center;
-  padding-block: 41px 34px;
-}
-
-.logo {
-  font-weight: 400;
-  font-size: 1.4rem;
-}
-
-.menu {
-
-}
-
-.menu__list {
-  display: flex;
-  column-gap: 42px;
-  justify-content: end;
-}
-
-.menu__item {
-  font-weight: 400;
-}
-
-.menu__link {
-}
-
-
-/* ================== */
-
-/* ======MAIN====== */
-
-
-
-
-
-.main {
-/* justify-content: space-between; */
-display: flex;
-/* max-width: 1440px; */
-  width: 100%;
-position: relative;
-min-height: 100vh;
-
-
-column-gap: 74px;
-}
-
-
-
-.main__content {
-  display: flex;
-  flex-direction: column;
-  padding-left: 115px;
-  row-gap: 37px;
-
-  margin-top: 278px;
-  width: 50%;
-    flex-shrink: 0;
-}
-
-
-.hero {
-  height: 100vh;
-  width: 50%;
-  flex-shrink: 0;
-
-}
-
-.hero img {
-
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-/* 
-
-
-
 
 .main__title {
-  font-weight: 700;
+ font-weight: 700;
   font-size: 2rem;
   line-height: 0.83;
 }
 
-.main__text {
+
+.hidden {
+  display: none;
+}
+
+
+.page {
+position: relative;
+min-height: 100vh;
+}
+/* ======HEADER====== */
+
+.header {
+max-height: 100px;
+
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+z-index: 10;
+}
+
+.header__inner {
+padding-block: 41px 34px;
+
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+align-self: center;
+}
+
+.logo {
+   font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 42px;
+}
+.menu__item {
   font-weight: 400;
+}
+
+/* ================== */
+
+
+
+
+/* ======MAIN====== */
+
+.main {
+
+display: grid;
+grid-template-columns: 1fr 50%;
+/* min-height: 100vh;  */
+height: 100vh; 
+
+/* grid-row-gap: 20px; */
+}
+
+.main__content {
+
+display: flex;
+flex-direction: column;
+/* row-gap: 37px; */
+justify-content: flex-end;
+
+
+
+
+/* width: 50%; */
+padding-top: 178px;
+padding-right: 74px;
+
+
+}
+
+
+.main__content_details {
+  
+  padding-left: 105px;
+}
+
+
+/* 👉 Це означає: «для кожного прямого дочірнього елемента в .main__content, крім останнього, додай відступ знизу 37px».
+Таким чином відступи будуть тільки між елементами, а останній залишиться без «гепу» */
+.main__content_details >*:not(:last-child) {  
+  margin-bottom: 37px;
+}
+
+
+
+.main__text {
+font-weight: 400;
   line-height: 1.75;
 }
 
 .main__list {
-  display: flex;
+display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 
 .main__item {
-  display: flex;
+display: flex;
   position: relative;
 }
+
+
 
 .main__item::before {
   content: "";
@@ -305,8 +307,46 @@ column-gap: 74px;
 
   background: var(--color-dark);
   border-radius: 34.5px;
-} */
+
+  margin-top: 25px;
+} 
+
+
+
+
+.hero {
+min-width: 0;
+/* height: 100vh; */
+height: 100%;
+
+}
+
+.hero img {
+  display: block;
+
+  width: 100%;
+height: 100%;
+object-fit: cover; 
+
+}
+
+
+
+
 /* ================== */
 
-/* ======HEADER====== */
-/* ================== */
+
+.footer {
+  /* padding-bottom: 19px; */
+  padding-top: 105px;
+  /* max-width: 435px; */
+  /* padding-inline: var(--container-padding-x); */
+  padding-bottom: 19px;
+  padding-left: 46px;
+
+}
+.footer__credits {
+font-weight: 400;
+font-size: 12px;
+  text-align: left;
+}
