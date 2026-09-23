@@ -133,7 +133,11 @@ html {
 body {
   background-color: var(--color-light);
   color: var(--color-dark);
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: clamp(0.9rem, calc(0.3vw + 0.7609rem), 1rem);
+
+
+
   font-family: var(--font-family-base);
   line-height: 1.2;
 
@@ -150,7 +154,32 @@ body {
 
 .main__title {
  font-weight: 700;
-  font-size: 2rem;
+  /* font-size: 2rem;  *//* 36px */
+  font-size: clamp(1.4rem, calc(1,64vw + 0.6892rem), 2rem); 
+
+
+/* 
+  1440 - 36 
+  768 - 20
+
+  clamp (20px, calc(2.38vw + 1.72px), 36px) */
+
+  /* A = (36 -20)/(1440-768)*100 = 20/672=2.38vw
+
+  20= 2.38%*768 + B = 1.72px  
+ B = 20-18.28 =1.72px */
+
+
+/* 20px = 1.1rem 
+36px = 2rem
+1.72px = 0.1075rem
+
+clamp (20px, calc(2.38vw + 1.72px), 36px)
+clamp (1.1rem, calc(2.38vw + 0.1075rem), 2rem) */
+
+
+
+
   line-height: 0.83;
 }
 
@@ -218,24 +247,28 @@ height: 100vh;
 
 .main__content {
 
-display: flex;
-flex-direction: column;
-/* row-gap: 37px; */
-justify-content: flex-end;
+/* display: flex; */
+/* flex-direction: column; */
+/* justify-content: flex-end; */
 
 
 
 
 /* width: 50%; */
-padding-top: 178px;
+padding-top: 278px;
 padding-right: 74px;
-
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 
 }
 
 
 .main__content_details {
-  
+  display: flex;
+flex-direction: column;
+justify-content: center;
+
   padding-left: 105px;
 }
 
