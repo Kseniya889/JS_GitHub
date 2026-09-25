@@ -6,28 +6,38 @@
 
   <!-- <link rel="stylesheet" href="./css/var.css"> -->
   <link rel="stylesheet" href="./css/style1.css">
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./css/media.css">
+
   <title>The Observer</title>
 </head>
 <body>
 
   <div class="page">
     <header class="header">
-      <div class="container-xl">
+      <!-- <div class="container-xl"> -->
         <div class="header__inner">
         
         <a href="#" class="logo">The Observer</a>
 
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">CV</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
-          </ul>
-        </nav>
+  
+          <button class="menu-button" aria-label="close" aria-controls="navigation" aria-expanded="false">
+          <span></span>
+          </button>
+
+          <nav class="menu" id="navigation">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">CV</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+            </ul>
+          </nav>
+
+      
         </div>
-      </div>
+        <!-- </div> -->
     </header>
 
 
@@ -42,23 +52,41 @@
           <p class="main__text">The Observer is a modern & simple theme suitable for almost any type of website and perfect for personal blogs and portfolios.</p>
           <p class="main__text">Observer theme contains most basic layouts such as About, Portfolio, Blog, CV and Contact.</p>
         
+
+
+
+<div class="list-media">
+  <div class="mobile_wrapper">
+    <div class="mobile_contents">
           <ul class="main__list">
 
             <li class="main__item figma">
-              <a href="" class="main__item__link">Available in Figma</a>
+              <a href="#" class="main__item__link">Available in Figma</a>
             </li>
 
             <li class="main__item wordpress">
-              <a href="" class="main__item__link">Integration with Wordpress</a>
+              <a href="#" class="main__item__link">Integration with Wordpress</a>
             </li>
 
             <li class="main__item voog">
-              <a href="" class="main__item__link">Integration with Voog</a>
+              <a href="#" class="main__item__link">Integration with Voog</a>
             </li>
           </ul>
 
           <button class="main__btn">Get in touch</button> 
         </div>
+    </div>
+
+        <div class="hero__mobile">
+          <img src="./images/main_bg.jpg" alt="" class="mobile__img">
+        </div>
+
+  </div>
+
+</div>
+
+
+
 
 
       <footer class="footer">

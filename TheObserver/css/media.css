@@ -1,0 +1,166 @@
+@media (max-width: 992px) {
+
+
+
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+
+  
+
+display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 100px 40px;
+
+/* background-color: var(--color-light-bg);
+opacity: 0.9; */
+
+background-color: color-mix(in srgb, var(--color-light-bg) 90%, transparent);
+border-right: 2px solid var(--color-light-bg);
+
+  transition: transform 0.3s ease;
+  /* z-index: 1; */
+  transform: translateX(-100%); 
+  z-index: 10;
+}
+
+.menu.active {
+    transform: translateX(0);
+  }
+
+
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  /* column-gap: 42px; */
+}
+
+  
+  .header__inner {
+      grid-template-columns: 1fr auto;
+      align-items: center;
+  }
+    
+  .menu-button{
+  display: block;
+  width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+.menu-button::before,
+.menu-button::after,
+.menu-button span {
+  content: '';
+  position: absolute;
+left: 0;
+width: 30px;
+height: 2px;
+background-color: #000;
+transition: 0.3s;
+
+}
+
+
+.menu-button::before {
+  top: -4px;
+}
+
+.menu-button span{
+ position: absolute;
+  top: 50%;
+  background-color: #000; 
+  transform: translateY(-50%);
+}
+
+.menu-button::after{
+  bottom: -4px;
+}
+
+.footer {
+      padding-left: 30px;
+}
+
+}
+
+
+
+@media (max-width: 768px) {
+  .main {
+display: grid;
+grid-template-columns: 1fr;
+height: 100vh; 
+min-height: 0;
+}
+
+.list-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main__title {
+ font-weight: 700;
+  /* font-size: 1.5rem; 36px */
+  font-size: clamp(1.67rem, calc(1.47vw + 1.3727rem), 2rem); 
+}
+
+.main__btn {
+  padding: 14px 29px;
+
+  margin-top: 15px;
+} 
+
+.hero {
+  display: none;
+}
+
+
+
+
+.list-media {
+  display: grid;
+  grid-template-columns: 42% 50%;
+}
+
+
+.mobile_wrapper {
+  display: grid;
+}
+
+.mobile_contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+.hero__mobile {
+  display: block;
+width: 32%;
+    aspect-ratio: 1 / 2.8;
+    float: right; /* або через flex/grid, щоб стояла поруч зі списком */
+    margin-left: 16px;
+
+}
+
+.main__content_details{
+  width: 700px;
+}
+
+
+
+}
+
+
