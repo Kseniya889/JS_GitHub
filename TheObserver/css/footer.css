@@ -1,0 +1,18 @@
+/* ======FOOTER====== */
+.footer {
+  /* padding-top: min(7.29vw, 105px); 105px/1440=7,29vw */
+  padding-top: 105px;
+  padding-bottom:  clamp(10px, 1.3vw, 19px); 
+  /* 19/1440*100=1,319px */
+  padding-left: 46px;
+white-space: nowrap /* заборонено переносити текст на іншу строку */
+}
+
+
+.footer__credits {
+font-weight: 400;
+font-size: 12px;
+  text-align: left;
+}
+
+/* ================== */

@@ -1,0 +1,150 @@
+
+@import url(var.css);
+/* @import url(media.css); */
+
+
+
+
+@font-face {
+  font-family: "Poppins";
+  src:
+    url(../fonts/Poppins/Poppins-Regular.woff2) format("woff2"),
+    url(../fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:
+    url(../fonts/Poppins/Poppins-Medium.woff2) format("woff2"),
+    url(../fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:
+    url(../fonts/Poppins/Poppins-SemiBold.woff2) format("woff2"),
+    url(../fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:
+    url(../fonts/Poppins/Poppins-Bold.woff2) format("woff2"),
+    url(../fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+
+/* ====base==== */
+
+
+html {
+ font-size: 16px;
+}
+
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font-family-base);
+  line-height: 1.2;
+
+
+   height: 100%;
+  /* overflow: hidden; */
+}
+
+[class*="container-"] {
+  width: 100%;
+  padding-inline: var(--container-padding-x);
+  /* margin: 0 auto; */
+}
+
+/* .container-xl {
+  max-width: var(--container-width-xl);  1450px
+} */
+
+.container-sm {
+  max-width: var(--container-width-sm);  /*849px*/
+  margin: 0 auto;
+}
+
+
+
+
+
+.main__title {
+ font-weight: 700;
+  /* font-size: 2rem;  *//* 36px */
+  font-size: clamp(1.4rem, calc(1.64vw + 0.6892rem), 2rem); 
+
+/* 
+  1440 - 36 
+  768 - 20
+
+  clamp (20px, calc(2.38vw + 1.72px), 36px) */
+
+  /* A = (36 -20)/(1440-768)*100 = 20/672=2.38vw
+
+  20= 2.38%*768 + B = 1.72px  
+ B = 20-18.28 =1.72px */
+
+
+/* 20px = 1.1rem 
+36px = 2rem
+1.72px = 0.1075rem
+
+clamp (20px, calc(2.38vw + 1.72px), 36px)
+clamp (1.1rem, calc(2.38vw + 0.1075rem), 2rem) */
+  line-height: 0.83;
+}
+
+.page {
+position: relative;
+min-height: 100svh;
+}
+
+
+.main__btn {
+  display: block;
+  width: fit-content;
+  height: auto;
+  text-align: left;
+
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-light);
+  padding: 20px 29px;
+
+  background: var(--color-dark);
+  border-radius: 34.5px;
+} 
+
+.main__btn.transparent {
+  background-color: transparent;
+  color: var(--color-dark);
+
+border: 1px solid #000000;
+border-radius: 34.5px;
+}
+
+
+h3 {
+font-weight: 700;
+/* font-size: 24px; */
+font-size: clamp(1.25rem, 0.964rem + 0.595vw, 1.5rem);
+/* 20-24 */
+
+/* margin-top: 20px; */
+margin-top: clamp(0.938rem, 0.58rem + 0.744vw, 1.25rem);
+/* 15-20 */
+}

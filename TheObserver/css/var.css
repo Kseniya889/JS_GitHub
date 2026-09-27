@@ -7,16 +7,30 @@
   --font-family-base: "Poppins", sans-serif;
   
 
- --container-width-xl: 1450px;
+ --container-width-xl: 1440px;
 /* 1358+46*2=1450px (1358 max-width контейнера + по 46px padding-inline*/
 
---container-width-sm: 941px;
+--container-width-sm: 849px;
 /* 849+46*2=941px (849 max-width контейнера + по 46px padding-inline*/
 
 
+
+
+
   --container-padding-x: 46px;
+  --container-padding-x: clamp(1.25rem, -0.607rem + 3.869vw, 2.875rem);
+  /* 20-46 */
   /* 
 
+
+
+
+
+
+
+
+
+  
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
 
