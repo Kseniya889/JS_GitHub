@@ -1,22 +1,4 @@
-.hero__title {
-  /* padding-top: 200px; */
-  text-align: center;
-  background-color: var(--color-light-bg);
-  /* padding-block: 200px 73px; */
 
-padding-top: clamp(9.375rem, 5.804rem + 7.44vw, 12.5rem);
-  /* 150px-200px */
-
-  padding-bottom: clamp(2.188rem, -0.527rem + 5.655vw, 4.563rem);
-  /* 35px-73px */
-}
-
-
-.main_AboutTheTheme {
-width: 100%;
-min-height: 100%;
-line-height: 1.75;
-}
 
 .main_content {
   /* margin-bottom: 63px; */

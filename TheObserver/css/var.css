@@ -7,14 +7,15 @@
   --font-family-base: "Poppins", sans-serif;
   
 
- --container-width-xl: 1440px;
-/* 1358+46*2=1450px (1358 max-width контейнера + по 46px padding-inline*/
-
 --container-width-sm: 849px;
 /* 849+46*2=941px (849 max-width контейнера + по 46px padding-inline*/
 
+--container-width-m: 1289px;
 
 
+
+ --container-width-xl: 1440px;
+/* 1358+46*2=1450px (1358 max-width контейнера + по 46px padding-inline*/
 
 
   --container-padding-x: 46px;
