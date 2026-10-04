@@ -1,0 +1,47 @@
+/* ====BLOG-CONTENT==== */
+
+.blog-content {
+  margin-top: 46px;
+}
+
+.card-grid {
+  display: flex;
+  align-items: center;
+  column-gap: 93px;
+}
+
+.card-grid:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.blog-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 44px;
+
+  flex: 1 1 521px;
+  min-width: 0;
+
+  margin-left: 55px;
+}
+
+.card-grid:nth-child(even) .blog-hero__content {
+  margin-left: -7px;
+}
+
+.blog-hero__images {
+  flex: 0 1 675px;
+  aspect-ratio: 1 / 1;
+}
+
+.blog-hero__images img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  margin-inline: 0;
+}
+
+/* ==================  */

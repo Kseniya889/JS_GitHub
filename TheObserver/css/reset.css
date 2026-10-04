@@ -56,12 +56,20 @@ button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-a,
+
+/* a,
 a:visited {
   text-decoration: none;
   color: #000;
+  color: inherit;
   
+} */
+
+:where(a, a:visited) {
+  text-decoration: none;
+  color: inherit;
 }
+
 a:hover {
   text-decoration: none;
 }

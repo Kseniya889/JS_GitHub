@@ -1,0 +1,49 @@
+
+
+/* ====MAIN==== */
+
+.main_content .container-sm{
+display: flex;
+flex-direction: column;
+gap: 36px;
+
+margin-top: 105px;
+}
+
+.title__small {
+font-weight: 700;
+}
+
+.nav li {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+background: var(--color-dark);
+}
+
+.main__title {
+  text-align: center;
+}
+
+.post__date{
+  display: block;
+line-height: 1.75;
+text-align: center;
+color: var( --color-light-grey);
+}
+
+.main_content_btn{
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+/* ==================  */

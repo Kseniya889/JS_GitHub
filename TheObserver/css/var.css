@@ -10,7 +10,7 @@
 --container-width-sm: 849px;
 /* 849+46*2=941px (849 max-width контейнера + по 46px padding-inline*/
 
---container-width-m: 1289px;
+--container-width-m: 1440px;
 
 
 
@@ -18,16 +18,17 @@
 /* 1358+46*2=1450px (1358 max-width контейнера + по 46px padding-inline*/
 
 
-  --container-padding-x: 46px;
+  /* --container-padding-x: 46px; */
   --container-padding-x: clamp(1.25rem, -0.607rem + 3.869vw, 2.875rem);
   /* 20-46 */
   /* 
 
 
 
+/* ====BLOG-HERO==== */
+/* ================== */
 
-
-
+/* 
 
 
 
@@ -42,5 +43,5 @@
   --container-width: 1300px;
   --container-padding-x: 15px;
 
-  --transition-duration: 0.2s; */
-} 
+  --transition-duration: 0.2s;  */
+}

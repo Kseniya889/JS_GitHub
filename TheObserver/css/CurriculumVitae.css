@@ -1,0 +1,107 @@
+
+
+.main__list {
+  display: flex;
+justify-content: center;
+  gap: 49px;
+}
+
+.hero__title--cv {
+  padding-top: 100px;
+}
+
+
+/* =====BIO===== */
+.bio {
+  /* text-align: center; */
+}
+
+.bio_wrapper {
+display: flex;
+align-items: flex-start;
+justify-content: start;
+  gap: 59px;
+
+  margin-bottom: 159px;
+
+}
+
+.bio__title {
+  margin-top: 105px;
+  margin-bottom: 85px;
+  text-align: center;
+}
+
+
+.bio__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 34px;
+}
+
+.small__title {
+font-weight: 700;
+font-size: 24px;
+line-height: 1.17;
+color: var(--color-dark);
+
+text-align: center;
+}
+
+.main__title {
+
+}
+
+.bio__info {
+
+}
+
+.bio__text {
+
+}
+
+.bio__video {
+  width: 675px;
+  aspect-ratio: 1;
+}
+
+.bio__media {
+  position: relative;
+}
+
+.bio__play {
+  content: '';
+  position: absolute;
+  right: 29px;
+  bottom: 24px;
+  width: 83px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: url(../icons/bio__btn.svg);
+}
+
+/* ============= */
+
+
+
+/* =====WORK-EXPERIENCES===== */
+
+.work-experiences {
+}
+
+
+.work-experiences__list {
+  columns: 2;
+  column-gap: 40px;
+
+  margin-top: 91px;
+}
+
+/* ============= */
+
+
+
+
+/* =====BIO===== */
+/* ============= */
